@@ -26,7 +26,7 @@ export function SmartCane3DSimulator() {
           </div>
           <div className="flex items-center gap-2">
             <a
-              href="/smart-stick-sim.html"
+              href="./smart-stick-sim.html"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center gap-1.5 transition-colors"
@@ -50,7 +50,7 @@ export function SmartCane3DSimulator() {
         {/* Embedded Standalone Simulation Iframe */}
         <div className={`w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-950 ${isFullscreen ? 'flex-1' : ''}`}>
           <iframe
-            src="/smart-stick-sim.html"
+            src="./smart-stick-sim.html"
             title={t('smart_cane.title', 'Smart Stick for the Blind 3D Simulation')}
             className="w-full border-0 block"
             style={{ height: isFullscreen ? '100%' : '880px', minHeight: '800px' }}

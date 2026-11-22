@@ -110,7 +110,30 @@ export function CategoryPage() {
         const json = await res.json();
 
         if (!res.ok) throw new Error(json.error || 'Failed to load category');
-        setCategoryData(json.data);
+        const apiCategory = json.data;
+        const staticCategory = getStaticCategory(slug);
+        if (!staticCategory) {
+          setCategoryData(apiCategory);
+        } else {
+          const apiBlocks = Array.isArray(apiCategory.blocks) ? apiCategory.blocks : [];
+          const mergedBlocks = staticCategory.blocks.map((fallbackBlock) => {
+            const apiBlock = apiBlocks.find((block) => block.type === fallbackBlock.type);
+            const body = apiBlock?.body_markdown || '';
+            const needsFallback =
+              !apiBlock ||
+              body.includes('being compiled') ||
+              body.includes('documentation being compiled') ||
+              body.trim().length === 0;
+            return needsFallback ? fallbackBlock : apiBlock;
+          });
+          setCategoryData({
+            ...staticCategory,
+            ...apiCategory,
+            blocks: mergedBlocks,
+            media: Array.isArray(apiCategory.media) ? apiCategory.media : staticCategory.media,
+            quiz: Array.isArray(apiCategory.quiz) ? apiCategory.quiz : staticCategory.quiz
+          });
+        }
       } catch (err) {
         console.error('Category fetch error:', err);
         const staticCategory = getStaticCategory(slug);

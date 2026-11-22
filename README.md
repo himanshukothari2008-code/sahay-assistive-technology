@@ -13,10 +13,9 @@
 ### 1. Installation
 In the project root directory, install dependencies:
 ```bash
-# Install root, server, and client packages
+# Install root and server packages
 npm install
 npm install --prefix server
-npm install --prefix client
 ```
 
 ### 2. Seed the SQLite Database

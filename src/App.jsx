@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link } from 'react-router-dom';
 import { AccessibilityProvider } from './context/AccessibilityContext';
 import { AuthProvider } from './context/AuthContext';
 import SkipLink from './components/common/SkipLink';
@@ -44,7 +44,7 @@ export function App() {
   return (
     <AuthProvider>
       <AccessibilityProvider>
-        <BrowserRouter>
+        <HashRouter>
           <div className="min-h-screen flex flex-col bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors selection:bg-blue-200 selection:text-blue-900">
             <SkipLink targetId="main-content" />
             <Navbar />
@@ -70,7 +70,7 @@ export function App() {
             <Footer />
             <AccessibilityDrawer />
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </AccessibilityProvider>
     </AuthProvider>
   );

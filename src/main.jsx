@@ -5,9 +5,9 @@ import './index.css';
 import './i18n';
 
 // Register PWA Service Worker for offline resilience
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch((err) => {
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch((err) => {
       console.warn('ServiceWorker registration error:', err);
     });
   });

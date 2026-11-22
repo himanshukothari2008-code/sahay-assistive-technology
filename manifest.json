@@ -1,0 +1,24 @@
+{
+  "short_name": "Sahay",
+  "name": "Sahay (सहाय) - Assistive Technology Hub",
+  "description": "WCAG 2.2 AA Educational & Assistive Technology Platform",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "display": "standalone",
+  "scope": "/"
+}

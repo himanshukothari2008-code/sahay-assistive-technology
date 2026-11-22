@@ -2331,6 +2331,65 @@ export function getStaticCategory(slug) {
   if (!category) return null;
 
   const meta = categoryMetaTranslations[slug]?.en;
+  const details = {
+    'visual-impairment': {
+      challenges: '### Common barriers\n- Low contrast, tiny text, and missing alternative text.\n- Complex layouts that do not work with keyboard or screen readers.\n- Glare, inaccessible maps, and poor lighting.',
+      simulation: 'Explore vision filters for cataracts, glaucoma, and colour blindness. Observe how contrast, layout, and screen-reader support change access.',
+      solution: '### Recommended solutions\n- Use screen readers, magnifiers, large text, and high-contrast themes.\n- Provide meaningful alternative text and keyboard-accessible controls.\n- Keep contrast at WCAG AA levels and avoid information conveyed only by colour.',
+      tool: 'Try magnification, screen-reader-friendly text, braille learning tools, and the 3D smart-cane simulation.',
+      resource: '### Rights and support\nThe RPwD Act 2016 recognises visual impairment and requires accessible public facilities and communication.'
+    },
+    'hearing-impairment': {
+      challenges: '### Common barriers\n- Videos without captions or transcripts.\n- Alarms and alerts that rely only on sound.\n- Phone-only services and fast spoken instructions.',
+      simulation: 'Experience frequency-loss filters and compare captions with audio-only communication.',
+      solution: '### Recommended solutions\n- Provide accurate captions, transcripts, sign-language interpretation, and visual alerts.\n- Use clear written instructions and allow text-based communication.',
+      tool: 'Use live captions, vibration alerts, and the Indian Sign Language simulator.',
+      resource: '### Rights and support\nPublic information and essential services should provide accessible, equivalent communication for deaf and hard-of-hearing people.'
+    },
+    'mobility-physical': {
+      challenges: '### Common barriers\n- Interfaces with small targets or drag-only interactions.\n- Buildings and transport with stairs or narrow routes.\n- Long time limits and repeated precise movements.',
+      simulation: 'Try motor-tremor targeting and switch-scanning interactions to understand fatigue and accuracy barriers.',
+      solution: '### Recommended solutions\n- Provide large touch targets, switch access, voice control, and keyboard navigation.\n- Allow adjustable timing and avoid actions that require precise repeated movement.',
+      tool: 'Explore motor-tremor and single-switch scanning simulations.',
+      resource: '### Rights and support\nRPwD Act 2016 provisions include accessibility of buildings, transport, information, and assistive support.'
+    },
+    'speech-language': {
+      challenges: '### Common barriers\n- Voice-only phone and emergency services.\n- Interfaces that require rapid speech or do not provide text alternatives.\n- Limited time to communicate urgent needs.',
+      simulation: 'Explore communication interfaces that rely on visual symbols and text-to-speech rather than spoken speech.',
+      solution: '### Recommended solutions\n- Use AAC boards, picture symbols, text-to-speech, and emergency cards.\n- Give extra response time and accept typed or written communication.',
+      tool: 'Try the AAC communication board and text-to-speech reader.',
+      resource: '### Rights and support\nSpeech and language disabilities are covered under the Rights of Persons with Disabilities Act, 2016.'
+    },
+    'learning-disabilities': {
+      challenges: '### Common barriers\n- Dense text, unclear page structure, and time-limited tests.\n- Fonts that make similar letters or words difficult to distinguish.\n- Instructions that depend only on memorisation.',
+      simulation: 'Experience letter movement and visual strain in the dyslexia reading simulator.',
+      solution: '### Recommended solutions\n- Use easy-read text, dyslexia-friendly fonts, reading rulers, and text-to-speech.\n- Divide work into manageable steps and allow extended time.',
+      tool: 'Use the reading simulator and document reader for audio and visual assistance.',
+      resource: '### Rights and support\nStudents may receive reasonable accommodation such as extra examination time and accessible learning materials.'
+    },
+    'adhd': {
+      challenges: '### Common barriers\n- Frequent notifications, moving animation, and competing visual content.\n- Long tasks with unclear steps or weak progress indicators.\n- Strict time limits and difficulty estimating elapsed time.',
+      simulation: 'Compare normal browsing with the ADHD focus-mode and distraction simulation.',
+      solution: '### Recommended solutions\n- Reduce distractions, allow focus mode, and break work into short steps.\n- Use visual timers, reminders, and clear progress indicators.',
+      tool: 'Try the ADHD focus and task-management simulator.',
+      resource: '### Rights and support\nReasonable accommodation and accessible teaching methods can support students and employees with ADHD.'
+    },
+    'autism-spectrum': {
+      challenges: '### Common barriers\n- Unexpected changes, sensory overload, loud noise, and flashing animation.\n- Ambiguous instructions, irony, or rapidly changing communication.\n- Crowded interfaces that are difficult to predict.',
+      simulation: 'Explore sensory-overload conditions and identify which visual or sound changes reduce accessibility.',
+      solution: '### Recommended solutions\n- Provide predictable layouts, plain language, visual schedules, and reduced motion.\n- Allow quiet spaces and minimise unnecessary sensory input.',
+      tool: 'Try the sensory-overload and calm-mode simulation.',
+      resource: '### Rights and support\nAutism spectrum conditions may qualify for reasonable accommodation and disability support under applicable Indian law.'
+    },
+    'mental-health': {
+      challenges: '### Common barriers\n- Stigma and fear of asking for help.\n- Heavy cognitive load, distracting interfaces, and strict deadlines.\n- Sudden distress, fatigue, and difficulty starting or completing tasks.',
+      simulation: 'Practice grounding techniques and reduce sensory and information overload with the mental-health well-being tools.',
+      solution: '### Recommended support\n- Use grounding exercises, calming layouts, task breaks, and crisis information.\n- Keep support confidential and make emergency help easy to find.\n- Seek a qualified mental-health professional when distress persists.',
+      tool: 'Try breathing and grounding exercises, an emergency card, and the crisis-support simulator.',
+      resource: '### Rights and support\nMental illness is recognised under the RPwD Act 2016. In India, KIRAN provides 24x7 mental-health support at 1800-599-0019.'
+    }
+  }[slug];
+
   return {
     ...category,
     title: meta?.title || category.title,
@@ -2339,10 +2398,39 @@ export function getStaticCategory(slug) {
       {
         type: 'overview',
         title: 'Overview',
-        body_markdown: meta?.summary
-          ? `${meta.summary}\n\nExplore the available tools and interactive simulations for this category.`
-          : `${category.summary}\n\nExplore the available tools and interactive simulations for this category.`,
+        body_markdown: `${category.summary}\n\nExplore the available tools and interactive simulations for this category.`,
         easy_read_body: category.summary
+      },
+      {
+        type: 'challenge',
+        title: 'Daily-Life Challenges',
+        body_markdown: details?.challenges || 'Challenges depend on the person and environment. Look for barriers in access, communication, timing, and participation.',
+        easy_read_body: category.summary
+      },
+      {
+        type: 'simulation',
+        title: 'Interactive Experience',
+        body_markdown: details?.simulation || 'Use the available interactive simulator to explore accessibility barriers.'
+      },
+      {
+        type: 'solution',
+        title: 'Solutions and Assistive Technologies',
+        body_markdown: details?.solution || 'Use accessible design, assistive tools, and reasonable accommodation.',
+        easy_read_body: category.summary
+      },
+      {
+        type: 'tool',
+        title: 'Built-in Assistive Tools',
+        body_markdown: details?.tool || 'Explore the built-in assistive tools for this topic.'
+      },
+      {
+        type: 'resource',
+        title: 'Resources, Rights and Support',
+        body_markdown: details?.resource || 'Use recognised national disability resources and qualified support services.',
+        sources: [
+          { name: 'RPwD Act 2016', url: 'https://www.indiacode.nic.in/handle/123456789/2155' },
+          { name: 'Swavlamban / UDID', url: 'https://www.swavlambancard.gov.in' }
+        ]
       }
     ],
     media: [],

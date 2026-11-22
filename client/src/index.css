@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lexend:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-family-current: 'Inter', system-ui, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-current: 1.6;
+  --letter-spacing-current: 0em;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-surface: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: #e2e8f0;
+  --primary-accent: #2563eb;
+  --primary-accent-hover: #1d4ed8;
+  --focus-ring-color: #2563eb;
+}
+
+/* Dark Mode Tokens */
+.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-surface: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --border-color: #334155;
+  --primary-accent: #38bdf8;
+  --primary-accent-hover: #0284c7;
+  --focus-ring-color: #38bdf8;
+}
+
+/* High Contrast Black on White Tokens */
+.theme-high-contrast {
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --bg-surface: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --border-color: #000000;
+  --primary-accent: #000000;
+  --primary-accent-hover: #333333;
+  --focus-ring-color: #000000;
+}
+
+/* High Contrast Yellow on Black Tokens (RPwD Standard Low-Vision Palette) */
+.theme-hc-yellow {
+  --bg-primary: #000000;
+  --bg-secondary: #000000;
+  --bg-surface: #0a0a0a;
+  --text-primary: #ffff00;
+  --text-secondary: #ffff55;
+  --border-color: #ffff00;
+  --primary-accent: #ffff00;
+  --primary-accent-hover: #ffea00;
+  --focus-ring-color: #00ffff;
+}
+
+/* Base Body Styling */
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-family-current);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-current);
+  letter-spacing: var(--letter-spacing-current);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Focus Styles - WCAG 2.2 AA Visible Focus */
+*:focus-visible {
+  outline: 3px solid var(--focus-ring-color) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 1rem;
+  background: var(--primary-accent);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  z-index: 9999;
+  font-weight: 700;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: top 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduce Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.reduce-motion *, .reduce-motion ::before, .reduce-motion ::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Dyslexia-friendly letter and word spacing helper */
+.font-dyslexic {
+  font-family: 'Lexend', 'OpenDyslexic', system-ui, sans-serif !important;
+  word-spacing: 0.16em !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Minimum 44x44 touch targets */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   1. DARK MODE ENHANCEMENTS
+   ========================================================================== */
+.dark body {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.dark input[type="text"],
+.dark input[type="search"],
+.dark input[type="email"],
+.dark input[type="password"],
+.dark textarea,
+.dark select {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Smooth dark transitions on sections */
+.dark section.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, #111827, #0f172a, #0b0f19) !important;
+}
+
+/* ==========================================================================
+   2. HIGH CONTRAST YELLOW ON BLACK (RPwD / LOW-VISION STANDARD)
+   ========================================================================== */
+html.theme-hc-yellow,
+html.theme-hc-yellow body,
+html.theme-hc-yellow #root,
+html.theme-hc-yellow main,
+html.theme-hc-yellow nav,
+html.theme-hc-yellow footer,
+html.theme-hc-yellow header,
+html.theme-hc-yellow aside,
+html.theme-hc-yellow section {
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ffff00 !important;
+}
+
+/* Universal Yellow Text & Headings */
+html.theme-hc-yellow h1,
+html.theme-hc-yellow h2,
+html.theme-hc-yellow h3,
+html.theme-hc-yellow h4,
+html.theme-hc-yellow h5,
+html.theme-hc-yellow h6,
+html.theme-hc-yellow p,
+html.theme-hc-yellow span,
+html.theme-hc-yellow li,
+html.theme-hc-yellow label,
+html.theme-hc-yellow strong,
+html.theme-hc-yellow em,
+html.theme-hc-yellow td,
+html.theme-hc-yellow th {
+  color: #ffff00 !important;
+}
+
+/* High Contrast Yellow Borders */
+html.theme-hc-yellow [class*="border"],
+html.theme-hc-yellow nav,
+html.theme-hc-yellow footer,
+html.theme-hc-yellow hr,
+html.theme-hc-yellow div.rounded-2xl,
+html.theme-hc-yellow div.rounded-xl,
+html.theme-hc-yellow div.rounded-3xl {
+  border-color: #ffff00 !important;
+}
+
+/* Cards & Surfaces in Yellow on Black */
+html.theme-hc-yellow .bg-white,
+html.theme-hc-yellow [class*="bg-slate-"],
+html.theme-hc-yellow [class*="bg-blue-"],
+html.theme-hc-yellow [class*="bg-emerald-"],
+html.theme-hc-yellow [class*="bg-purple-"],
+html.theme-hc-yellow [class*="bg-amber-"],
+html.theme-hc-yellow [class*="bg-rose-"],
+html.theme-hc-yellow [class*="bg-gray-"],
+html.theme-hc-yellow [class*="bg-gradient-"] {
+  background-color: #000000 !important;
+  background-image: none !important;
+  border-color: #ffff00 !important;
+  box-shadow: none !important;
+}
+
+/* High Contrast Yellow on Black Links */
+html.theme-hc-yellow a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+}
+
+html.theme-hc-yellow a:hover {
+  color: #ffffff !important;
+  background-color: #222222 !important;
+}
+
+/* High Contrast Buttons */
+html.theme-hc-yellow button {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+  box-shadow: none !important;
+}
+
+html.theme-hc-yellow button:hover,
+html.theme-hc-yellow button[aria-selected="true"],
+html.theme-hc-yellow button[aria-pressed="true"],
+html.theme-hc-yellow button.on {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #ffff00 !important;
+  font-weight: 800 !important;
+}
+
+/* Ensure icons/spans inside active buttons flip to black */
+html.theme-hc-yellow button:hover *,
+html.theme-hc-yellow button[aria-selected="true"] *,
+html.theme-hc-yellow button[aria-pressed="true"] *,
+html.theme-hc-yellow button.on * {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* High Contrast Inputs */
+html.theme-hc-yellow input,
+html.theme-hc-yellow textarea,
+html.theme-hc-yellow select {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+  box-shadow: none !important;
+}
+
+html.theme-hc-yellow input::placeholder,
+html.theme-hc-yellow textarea::placeholder {
+  color: #aaaa00 !important;
+}
+
+/* High Contrast SVGs & Icons */
+html.theme-hc-yellow svg {
+  color: #ffff00 !important;
+  stroke: #ffff00 !important;
+}
+
+/* High Contrast Visible Focus */
+html.theme-hc-yellow *:focus-visible {
+  outline: 3px solid #00ffff !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 4px #000000 !important;
+}
+
+/* ==========================================================================
+   3. HIGH CONTRAST BLACK & WHITE (MONOCHROME WCAG AAA)
+   ========================================================================== */
+html.theme-high-contrast,
+html.theme-high-contrast body,
+html.theme-high-contrast #root,
+html.theme-high-contrast main,
+html.theme-high-contrast nav,
+html.theme-high-contrast footer,
+html.theme-high-contrast header,
+html.theme-high-contrast aside,
+html.theme-high-contrast section {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+/* Universal Pure Black Text & Headings */
+html.theme-high-contrast h1,
+html.theme-high-contrast h2,
+html.theme-high-contrast h3,
+html.theme-high-contrast h4,
+html.theme-high-contrast h5,
+html.theme-high-contrast h6,
+html.theme-high-contrast p,
+html.theme-high-contrast span,
+html.theme-high-contrast li,
+html.theme-high-contrast label,
+html.theme-high-contrast strong,
+html.theme-high-contrast em,
+html.theme-high-contrast td,
+html.theme-high-contrast th {
+  color: #000000 !important;
+}
+
+/* High Contrast Black Borders */
+html.theme-high-contrast [class*="border"],
+html.theme-high-contrast nav,
+html.theme-high-contrast footer,
+html.theme-high-contrast hr,
+html.theme-high-contrast div.rounded-2xl,
+html.theme-high-contrast div.rounded-xl,
+html.theme-high-contrast div.rounded-3xl {
+  border-color: #000000 !important;
+  border-width: 2px !important;
+}
+
+/* Cards & Surfaces in High Contrast B&W */
+html.theme-high-contrast .bg-white,
+html.theme-high-contrast [class*="bg-slate-"],
+html.theme-high-contrast [class*="bg-blue-"],
+html.theme-high-contrast [class*="bg-emerald-"],
+html.theme-high-contrast [class*="bg-purple-"],
+html.theme-high-contrast [class*="bg-amber-"],
+html.theme-high-contrast [class*="bg-rose-"],
+html.theme-high-contrast [class*="bg-gray-"],
+html.theme-high-contrast [class*="bg-gradient-"] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: #000000 !important;
+  box-shadow: none !important;
+}
+
+/* High Contrast B&W Links */
+html.theme-high-contrast a {
+  color: #000000 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  font-weight: 700 !important;
+}
+
+html.theme-high-contrast a:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* High Contrast B&W Buttons */
+html.theme-high-contrast button {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+html.theme-high-contrast button:hover,
+html.theme-high-contrast button[aria-selected="true"],
+html.theme-high-contrast button[aria-pressed="true"],
+html.theme-high-contrast button.on {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #000000 !important;
+}
+
+/* Ensure icons/spans inside active buttons flip to white */
+html.theme-high-contrast button:hover *,
+html.theme-high-contrast button[aria-selected="true"] *,
+html.theme-high-contrast button[aria-pressed="true"] *,
+html.theme-high-contrast button.on * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* High Contrast B&W Inputs */
+html.theme-high-contrast input,
+html.theme-high-contrast textarea,
+html.theme-high-contrast select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+html.theme-high-contrast input::placeholder,
+html.theme-high-contrast textarea::placeholder {
+  color: #444444 !important;
+}
+
+/* High Contrast B&W SVGs & Icons */
+html.theme-high-contrast svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* High Contrast B&W Visible Focus */
+html.theme-high-contrast *:focus-visible {
+  outline: 3px solid #000000 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 4px #ffffff !important;
+}

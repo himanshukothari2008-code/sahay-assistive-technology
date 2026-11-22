@@ -43,6 +43,12 @@ export function HomePage() {
 
   useEffect(() => {
     async function loadCategories() {
+      if (window.location.hostname.endsWith('github.io')) {
+        setCategories(staticCategoryList);
+        setIsLoading(false);
+        return;
+      }
+
       try {
         setIsLoading(true);
         const res = await fetch('/api/v1/categories');

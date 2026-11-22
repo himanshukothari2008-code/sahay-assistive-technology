@@ -9,6 +9,12 @@ export function AuthProvider({ children }) {
   // Restore session on app load
   useEffect(() => {
     async function restoreSession() {
+      if (window.location.hostname.endsWith('github.io')) {
+        setUser(null);
+        setIsLoading(false);
+        return;
+      }
+
       try {
         const res = await fetch('/api/v1/auth/me');
         if (res.ok) {

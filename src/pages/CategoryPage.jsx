@@ -92,6 +92,15 @@ export function CategoryPage() {
 
   useEffect(() => {
     async function fetchCategory() {
+      if (window.location.hostname.endsWith('github.io')) {
+        const staticCategory = getStaticCategory(slug);
+        setCategoryData(staticCategory);
+        setError(staticCategory ? null : 'Category not found');
+        setIsLoading(false);
+        window.scrollTo(0, 0);
+        return;
+      }
+
       try {
         setIsLoading(true);
         setError(null);

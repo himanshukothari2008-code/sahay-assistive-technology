@@ -2266,3 +2266,87 @@ export function getLocalizedCategoryList(categories, lang = 'en') {
     };
   });
 }
+
+export const staticCategoryList = [
+  {
+    id: 'cat-visual',
+    slug: 'visual-impairment',
+    title: 'Visual Impairment',
+    icon: 'Eye',
+    summary: 'Understanding blindness, low vision, and colour blindness—with optical simulations, screen-reading tools, and inclusive design solutions.'
+  },
+  {
+    id: 'cat-hearing',
+    slug: 'hearing-impairment',
+    title: 'Hearing & Auditory Impairment',
+    icon: 'Ear',
+    summary: 'Exploring deaf and hard-of-hearing experiences, frequency filters, sign language basics, and live assistive captioning technologies.'
+  },
+  {
+    id: 'cat-mobility',
+    slug: 'mobility-physical',
+    title: 'Mobility & Physical Disability',
+    icon: 'Accessibility',
+    summary: 'Navigating motor conditions, tremor adaptations, ergonomic switch controls, and wheelchair ergonomics in physical and digital spaces.'
+  },
+  {
+    id: 'cat-speech',
+    slug: 'speech-language',
+    title: 'Speech & Language Impairment',
+    icon: 'MessageSquare',
+    summary: 'Supporting non-verbal communication, aphasia, and dysarthria through Augmentative and Alternative Communication (AAC) speech boards.'
+  },
+  {
+    id: 'cat-learning',
+    slug: 'learning-disabilities',
+    title: 'Learning Disabilities & Dyslexia',
+    icon: 'BookOpen',
+    summary: 'Understanding dyslexia, dysgraphia, and dyscalculia with reading ruler simulators, typography adjustments, and cognitive pacing tools.'
+  },
+  {
+    id: 'cat-adhd',
+    slug: 'adhd',
+    title: 'ADHD & Executive Functioning',
+    icon: 'Zap',
+    summary: 'Managing attention, sensory distraction, and cognitive overwhelm with focus-mode layouts, task chunking, and calming timers.'
+  },
+  {
+    id: 'cat-autism',
+    slug: 'autism-spectrum',
+    title: 'Autism Spectrum & Neurodiversity',
+    icon: 'Activity',
+    summary: 'Sensory sensitivity awareness, respectful communication adaptations, routine predictability, and sensory-friendly digital environments.'
+  },
+  {
+    id: 'cat-mental-health',
+    slug: 'mental-health',
+    title: 'Mental Health & Emotional Well-being',
+    icon: 'HeartHandshake',
+    summary: 'Sensitive guidance, grounding exercises, supportive technology for anxiety and depression, and emergency mental health helplines.'
+  }
+];
+
+export function getStaticCategory(slug) {
+  const category = staticCategoryList.find((item) => item.slug === slug);
+  if (!category) return null;
+
+  const meta = categoryMetaTranslations[slug]?.en;
+  return {
+    ...category,
+    title: meta?.title || category.title,
+    summary: meta?.summary || category.summary,
+    blocks: [
+      {
+        type: 'overview',
+        title: 'Overview',
+        body_markdown: meta?.summary
+          ? `${meta.summary}\n\nExplore the available tools and interactive simulations for this category.`
+          : `${category.summary}\n\nExplore the available tools and interactive simulations for this category.`,
+        easy_read_body: category.summary
+      }
+    ],
+    media: [],
+    quizzes: [],
+    quiz: []
+  };
+}

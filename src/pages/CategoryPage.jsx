@@ -34,7 +34,7 @@ import SmartCane3DSimulator from '../components/simulations/SmartCane3DSimulator
 import BrailleSimulator from '../components/simulations/BrailleSimulator';
 import ISLSimulator from '../components/simulations/ISLSimulator';
 import MarkdownRenderer, { cleanMarkdownForSpeech } from '../components/common/MarkdownRenderer';
-import { getLocalizedCategory } from '../i18n/categoryTranslations';
+import { getLocalizedCategory, getStaticCategory } from '../i18n/categoryTranslations';
 
 const iconMap = {
   Eye,
@@ -104,7 +104,13 @@ export function CategoryPage() {
         setCategoryData(json.data);
       } catch (err) {
         console.error('Category fetch error:', err);
-        setError(err.message);
+        const staticCategory = getStaticCategory(slug);
+        if (staticCategory) {
+          setCategoryData(staticCategory);
+          setError(null);
+        } else {
+          setError(err.message);
+        }
       } finally {
         setIsLoading(false);
       }

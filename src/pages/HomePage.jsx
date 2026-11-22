@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { useAccessibility } from '../context/AccessibilityContext';
 import Button from '../components/common/Button';
-import { getLocalizedCategoryList } from '../i18n/categoryTranslations';
+import { getLocalizedCategoryList, staticCategoryList } from '../i18n/categoryTranslations';
 
 const iconMap = {
   Eye,
@@ -35,7 +35,7 @@ const iconMap = {
 
 export function HomePage() {
   const { t, i18n } = useTranslation();
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState(staticCategoryList);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const { toggleDrawer } = useAccessibility();
@@ -46,8 +46,12 @@ export function HomePage() {
       try {
         setIsLoading(true);
         const res = await fetch('/api/v1/categories');
-        const json = await res.json();
-        setCategories(json.data || []);
+        if (res.ok) {
+          const json = await res.json();
+          if (Array.isArray(json.data) && json.data.length > 0) {
+            setCategories(json.data);
+          }
+        }
       } catch (err) {
         console.error('Failed to load categories:', err);
       } finally {

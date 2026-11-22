@@ -92,10 +92,10 @@ export function CategoryPage() {
 
   useEffect(() => {
     async function fetchCategory() {
-      if (window.location.hostname.endsWith('github.io')) {
-        const staticCategory = getStaticCategory(slug);
+      const staticCategory = getStaticCategory(slug);
+      if (staticCategory) {
         setCategoryData(staticCategory);
-        setError(staticCategory ? null : 'Category not found');
+        setError(null);
         setIsLoading(false);
         window.scrollTo(0, 0);
         return;
@@ -130,8 +130,12 @@ export function CategoryPage() {
             ...staticCategory,
             ...apiCategory,
             blocks: mergedBlocks,
-            media: Array.isArray(apiCategory.media) ? apiCategory.media : staticCategory.media,
-            quiz: Array.isArray(apiCategory.quiz) ? apiCategory.quiz : staticCategory.quiz
+            media: Array.isArray(apiCategory.media) && apiCategory.media.length > 0
+              ? apiCategory.media
+              : staticCategory.media,
+            quiz: Array.isArray(apiCategory.quiz) && apiCategory.quiz.length > 0
+              ? apiCategory.quiz
+              : staticCategory.quiz
           });
         }
       } catch (err) {

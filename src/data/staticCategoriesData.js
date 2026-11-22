@@ -1,0 +1,1950 @@
+// Comprehensive Static Fallback Data for Sahay (All 8 Categories, 7 Blocks, Media & Quizzes)
+export const staticCategoryBlocks = {
+  "visual-impairment": [
+    {
+      "id": "visual-impairment-overview",
+      "category_id": "cat-visual",
+      "type": "overview",
+      "title": "What is Visual Impairment?",
+      "body_markdown": "Visual impairment covers a broad spectrum of sight reduction that cannot be fully corrected with standard glasses or contact lenses. It ranges from mild low vision to complete blindness.\n      \n### Key Types:\n- **Low Vision:** Reduced visual acuity or contrast sensitivity where a person retains some functional sight.\n- **Cataracts:** Clouding of the eye's natural lens, creating hazy, faded vision and heightened glare.\n- **Glaucoma:** Gradual damage to the optic nerve, frequently resulting in severe peripheral vision loss (\"tunnel vision\").\n- **Macular Degeneration:** Deterioration of the retina's central area, creating a dark or distorted blind spot directly in front of the viewer.\n- **Colour Vision Deficiency (CVD):** Difficulty distinguishing between shades (e.g., red-green in Protanopia and Deuteranopia, or blue-yellow in Tritanopia).\n\n### Facts & Epidemiology:\nAccording to the World Health Organization (WHO), at least 2.2 billion people globally have a near or distant vision impairment. In India, under the Rights of Persons with Disabilities (RPwD) Act 2016, both Blindness and Low Vision are legally recognized benchmark disabilities.",
+      "easy_read_body": "Visual impairment means someone has trouble seeing clearly, even with glasses. Some people can see shapes and light, some see like looking through a dark tube, and some cannot see at all. Special computer tools and large text help people read and learn.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "World Health Organization (WHO) - Blindness and Vision Impairment Fact Sheet",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment"
+        },
+        {
+          "name": "Ministry of Social Justice and Empowerment, Government of India - RPwD Act 2016",
+          "url": "https://disabilityaffairs.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "visual-impairment-challenge",
+      "category_id": "cat-visual",
+      "type": "challenge",
+      "title": "Daily-Life Challenges",
+      "body_markdown": "People with visual impairments experience distinct hurdles across physical and digital environments:\n- **Digital Navigation:** Inaccessible websites with unlabeled buttons, missing image alt-text, or poor color contrast that cannot be parsed by screen readers.\n- **Public Mobility:** Navigating unpaved footpaths, missing tactile paving (guiding tiles), and silent electric vehicles without audible signals.\n- **Printed Material:** Reading medicine expiry dates, bills, restaurant menus, or instructional manuals without Braille or digital equivalents.\n- **Lighting Extremes:** Difficulty adapting to abrupt transitions between dark interiors and harsh sunlight.",
+      "easy_read_body": "Reading tiny print on paper or computer screens is hard. Walking on uneven roads without warning signs can be unsafe. Clear audio directions and large buttons make life easier.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "National Institute for the Visually Handicapped (NIVH), Dehradun",
+          "url": "https://nivh.gov.in"
+        }
+      ]
+    },
+    {
+      "id": "visual-impairment-simulation",
+      "category_id": "cat-visual",
+      "type": "simulation",
+      "title": "Experience It: Interactive Vision Simulator",
+      "body_markdown": "Use our real-time interactive optical simulation controls below. You can apply Cataract blur, Glaucoma peripheral tunnel masking, Macular central scotoma, and Color-blindness matrices to sample interfaces to understand how visual information is perceived.\n      \n*Important Note:* Simulations provide an educational approximation to foster empathy and inclusive design awareness; they do not encompass the full perceptual adaptation of living with visual impairment.",
+      "easy_read_body": "Try our vision simulator to see how words and pictures look when someone has low vision or color blindness.",
+      "display_order": 3,
+      "sources": [
+        {
+          "name": "Web Content Accessibility Guidelines (WCAG) 2.2",
+          "url": "https://www.w3.org/WAI/standards-guidelines/wcag/"
+        }
+      ]
+    },
+    {
+      "id": "visual-impairment-solution",
+      "category_id": "cat-visual",
+      "type": "solution",
+      "title": "Solutions and Assistive Technologies",
+      "body_markdown": "Modern assistive hardware and software empower people with visual impairments to independently study, work, and commute:\n\n### 1. Screen Readers & Audio Interfaces\nSoftware such as **NVDA** (NonVisual Desktop Access, free and open-source), **JAWS**, **VoiceOver** (Apple), and **TalkBack** (Android) convert on-screen text and layout structures into synthesized speech or Braille outputs.\n\n### 2. Refreshable Braille Displays\nHardware devices that use piezoelectric pins to dynamically raise and lower Braille cells corresponding to screen text lines.\n\n### 3. Optical Character Recognition (OCR) & AI Glasses\nWearable devices like **Envision Glasses** or **OrCam MyEye** photograph text, recognise faces, and read banknotes directly into a discreet earpiece.\n\n### 4. Accessible Digital Design (WCAG 2.2 AA)\n- Minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text.\n- Meaningful alternative text descriptions on all informational images.\n- Full keyboard accessibility without requiring mouse pointer interaction.\n\n### 5. Smart Canes & Electronic Travel Aids (ETAs)\nDevices such as the **IIT Delhi SmartCane™** attach to standard white canes with dual ultrasonic sensors:\n- **Blue Front Sensor:** Emits directional 40 kHz pulses to detect obstacles (stones, vehicles, waist-level tree branches) up to 1.5–2 meters away.\n- **Purple Ground Sensor:** Angles downward at 45° to detect sudden ground drop-offs, potholes, and staircases before the cane tip even reaches them, providing auditory and haptic warnings.",
+      "easy_read_body": "Screen reader apps read what is on the screen out loud. Braille devices allow reading with fingertips. Smart cameras can read books and recognize people.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "NV Access - NVDA Screen Reader",
+          "url": "https://www.nvaccess.org/"
+        },
+        {
+          "name": "W3C Web Accessibility Initiative (WAI)",
+          "url": "https://www.w3.org/WAI/"
+        }
+      ]
+    },
+    {
+      "id": "visual-impairment-tool",
+      "category_id": "cat-visual",
+      "type": "tool",
+      "title": "Try It: Built-in Speech & High Contrast Tools",
+      "body_markdown": "Try the tools integrated right here on AccessiAid:\n- **Speech Reader:** Click the \"Listen\" button at the top of any section to have our browser-powered text-to-speech engine read content aloud with word highlighting.\n- **Accessibility Toolbar:** Open the accessibility settings drawer to switch to High Contrast Mode (yellow-on-black) or scale text up to 200% without breaking page layouts.",
+      "easy_read_body": "Press the audio button to listen to any text. You can also make letters bigger and change colors.",
+      "display_order": 5,
+      "sources": []
+    },
+    {
+      "id": "visual-impairment-resource",
+      "category_id": "cat-visual",
+      "type": "resource",
+      "title": "Resources, Rights & Support in India",
+      "body_markdown": "### Legal Rights under the RPwD Act 2016:\n- Mandates 4% reservation in government employment for persons with benchmark disabilities (including 1% specifically for blindness and low vision).\n- Mandates accessibility standards in all public buildings, public transport, and digital services (aligned with GIGW - Guidelines for Indian Government Websites).\n- Provision of the **UDID (Unique Disability ID) Card** via Swavlamban Card portal for nationwide benefits.\n\n### Support Organisations & Schemes:\n- **National Association for the Blind (NAB India):** Comprehensive rehabilitation, vocational training, and Braille library services.\n- **Sugamya Pustakalaya:** An online library that provides accessible formats (DAISY, audio, Braille) to persons with print disabilities.\n- **ADIP Scheme (Assistance to Disabled Persons for Purchase/Fitting of Aids and Appliances):** Subsidized or free smart canes, Braille kits, and daisy players through ALIMCO.",
+      "easy_read_body": "The Indian government provides the UDID card for free travel discounts and assistive devices. The Sugamya Pustakalaya online library offers free audiobooks for people who cannot read standard print.",
+      "display_order": 6,
+      "sources": [
+        {
+          "name": "Swavlamban Portal - Unique Disability ID (UDID)",
+          "url": "https://www.swavlambancard.gov.in/"
+        },
+        {
+          "name": "Sugamya Pustakalaya - Digital Accessible Library",
+          "url": "https://sugamyapustakalaya.in/"
+        }
+      ]
+    },
+    {
+      "id": "visual-impairment-myth_fact",
+      "category_id": "cat-visual",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities",
+      "body_markdown": "### Myth 1: \"All blind people live in total, pitch-black darkness.\"\n**Fact:** In reality, approximately 85% of people diagnosed with visual impairment or legal blindness have residual vision—they can perceive light, contrast, shadows, or colors.\n\n### Myth 2: \"People with visual impairments have superhuman hearing or sixth senses.\"\n**Fact:** There is no biological magic; individuals simply learn to pay closer cognitive attention to subtle auditory, tactile, and echo cues around them through practice.\n\n### Myth 3: \"Braille is obsolete because we have voice assistants.\"\n**Fact:** Braille remains crucial for literacy, spelling, grammar, mathematics, and independent note-taking, complementing audio rather than being replaced by it.",
+      "easy_read_body": "Myth: Blind people cannot see anything. Fact: Most people with sight loss can still see light and shapes. Braille is still very important for learning.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "American Foundation for the Blind - Myths and Facts",
+          "url": "https://www.afb.org"
+        }
+      ]
+    }
+  ],
+  "hearing-impairment": [
+    {
+      "id": "hearing-impairment-overview",
+      "category_id": "cat-hearing",
+      "type": "overview",
+      "title": "What is Hearing Impairment?",
+      "body_markdown": "Hearing impairment refers to the complete or partial inability to hear sounds in one or both ears. It can range in severity from mild, moderate, and severe to profound deafness.\n\n### Clinical Types:\n- **Conductive Hearing Loss:** Sound waves are blocked before reaching the inner ear, often due to fluid, ear infections, or perforated eardrums.\n- **Sensorineural Hearing Loss:** Damage to the delicate hair cells in the cochlea or the auditory nerve, commonly causing difficulty distinguishing speech frequencies and voices in noisy environments.\n- **Mixed Hearing Loss:** A combination of conductive and sensorineural conditions.\n- **Tinnitus:** The perception of persistent ringing, buzzing, clicking, or hissing in the ears without an external sound source.\n\n### Global & National Impact:\nWHO reports over 1.5 billion people live with some degree of hearing loss worldwide. In India, hearing impairment is categorized under Deaf and Hard of Hearing in the RPwD Act 2016.",
+      "easy_read_body": "Hearing loss means having difficulty hearing sounds or understanding people talking. Some people use hearing aids, some use sign language, and captions help everyone watch videos without missing words.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "WHO - Deafness and Hearing Loss Fact Sheet",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss"
+        },
+        {
+          "name": "Indian Sign Language Research and Training Centre (ISLRTC)",
+          "url": "https://islrtc.nic.in/"
+        }
+      ]
+    },
+    {
+      "id": "hearing-impairment-challenge",
+      "category_id": "cat-hearing",
+      "type": "challenge",
+      "title": "Daily-Life Challenges",
+      "body_markdown": "Key barriers faced by individuals who are deaf or hard-of-hearing:\n- **Audio-Only Announcements:** Train stations, airports, and hospitals relying strictly on loudspeaker calls without synchronized visual display screens.\n- **Uncaptioned Videos & Streams:** Lectures, web videos, and emergency news broadcasts that lack accurate, synchronized closed captions (CC).\n- **Social Fatigue & Cocktail Party Effect:** Straining to read lips in reverberant or dimly lit rooms causes immense cognitive exhaustion.\n- **Emergency Situations:** Inability to hear smoke alarms, doorbells, or automobile horns without vibrating or flashing strobe alerts.",
+      "easy_read_body": "Missing spoken announcements in stations or videos without captions is frustrating. Talking in loud places makes understanding words very tiring.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "Ali Yavar Jung National Institute of Speech and Hearing Disabilities (AYJNISHD)",
+          "url": "http://ayjnihh.nic.in/"
+        }
+      ]
+    },
+    {
+      "id": "hearing-impairment-simulation",
+      "category_id": "cat-hearing",
+      "type": "simulation",
+      "title": "Experience It: Frequency Attenuation & Tinnitus Filter",
+      "body_markdown": "Hear through our Web Audio API simulation below. You can dial down higher acoustic frequencies (low-pass attenuation) to experience how vowels remain loud while consonants (s, f, th, k) become unintelligible, and activate a calibrated high-pitched tinnitus frequency tone.\n      \n*Content Warning:* Start at low device volume. An instant \"Stop Audio\" button is provided.",
+      "easy_read_body": "Listen to how sounds become muffled with hearing loss and how closed captions help you follow conversations clearly.",
+      "display_order": 3,
+      "sources": []
+    },
+    {
+      "id": "hearing-impairment-solution",
+      "category_id": "cat-hearing",
+      "type": "solution",
+      "title": "Solutions and Assistive Technologies",
+      "body_markdown": "Technological advances provide remarkable auditory and visual accommodations:\n\n### 1. Digital Hearing Aids & Cochlear Implants\nModern hearing aids feature directional microphones, AI-driven background noise cancellation, and Bluetooth streaming directly to smartphones. Cochlear implants directly stimulate the auditory nerve for individuals with profound sensorineural deafness.\n\n### 2. Live Automatic Speech-to-Text Captioning\nApps and browser tools (such as Google Live Transcribe) transcribe spoken dialogues into high-contrast captions on screen in real time.\n\n### 3. Visual & Haptic Alerting Systems\nFlashing strobe doorbells, vibrating bed-shakers linked to smoke alarms, and smartwatch vibration alerts for vehicle horns or door knocks.\n\n### 4. Indian Sign Language (ISL)\nISL has its own independent grammar, syntax, and spatial vocabulary. ISLRTC recently standardized over 10,000 words in the official Indian Sign Language Dictionary.",
+      "easy_read_body": "Hearing aids make sounds louder and clearer. Live speech-to-text turns voice into words on your phone screen. Sign language allows communication using hands and facial expressions.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "Indian Sign Language Dictionary (ISLRTC)",
+          "url": "https://islrtc.nic.in/isl-dictionary"
+        },
+        {
+          "name": "National Association of the Deaf (NAD India)",
+          "url": "https://nadindia.org/"
+        }
+      ]
+    },
+    {
+      "id": "hearing-impairment-tool",
+      "category_id": "cat-hearing",
+      "type": "tool",
+      "title": "Try It: Built-in Live Captions & Sign Alphabet",
+      "body_markdown": "Experience our integrated tools:\n- **Speech-to-Text Live Captioner:** Speak into your microphone and observe real-time captions rendered with high contrast on screen.\n- **ISL Fingerspelling Visualizer:** Interactive cards demonstrating the Indian Sign Language alphabet and common conversational greetings.",
+      "easy_read_body": "Try speaking into your computer to see words appear on screen like magic captions.",
+      "display_order": 5,
+      "sources": []
+    },
+    {
+      "id": "hearing-impairment-resource",
+      "category_id": "cat-hearing",
+      "type": "resource",
+      "title": "Resources & RPwD Act Provisions in India",
+      "body_markdown": "### Key Government Schemes & Protections:\n- **RPwD Act 2016:** Guarantees sign language interpreters in judicial and public settings, barrier-free communication, and television news subtitling.\n- **ADIP Scheme for Hearing Aids & Cochlear Implants:** Financial assistance up to ₹6,00,000 for pediatric cochlear implant surgeries in children with hearing loss from low-income families through designated empanelled hospitals.\n- **AYJNISHD (Mumbai):** Pioneer national institute offering speech therapy, audiological evaluation, and assistive device fitment.",
+      "easy_read_body": "The ADIP scheme helps eligible families receive free hearing aids or cochlear implants. The RPwD Act requires news and videos to provide sign language or subtitles.",
+      "display_order": 6,
+      "sources": [
+        {
+          "name": "Department of Empowerment of Persons with Disabilities (DEPwD)",
+          "url": "https://disabilityaffairs.gov.in"
+        }
+      ]
+    },
+    {
+      "id": "hearing-impairment-myth_fact",
+      "category_id": "cat-hearing",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities in Hearing & Deafness",
+      "body_markdown": "### Myth 1: \"All deaf people can read lips accurately.\"\n**Fact:** Lipreading is extremely difficult; only about 30% to 40% of English and Indian spoken speech sounds are visibly distinguishable on the lips, with many sounds (p/b/m, t/d) looking identical.\n\n### Myth 2: \"Hearing aids and cochlear implants completely restore normal hearing like glasses do for vision.\"\n**Fact:** Hearing aids amplify sound, including background noise; cochlear implants deliver electrical auditory stimulation that requires months of dedicated auditory retraining.\n\n### Myth 3: \"Sign language is universal worldwide.\"\n**Fact:** Sign languages are natural languages with independent grammars and regional variations. Indian Sign Language (ISL) is completely distinct from American Sign Language (ASL) or British Sign Language (BSL).",
+      "easy_read_body": "Myth: Deaf people can easily read everyone's lips. Fact: Lipreading is very hard. Captions and sign language are much clearer.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "World Federation of the Deaf (WFD)",
+          "url": "https://wfdeaf.org/"
+        }
+      ]
+    }
+  ],
+  "mobility-physical": [
+    {
+      "id": "mobility-physical-overview",
+      "category_id": "cat-mobility",
+      "type": "overview",
+      "title": "What is Mobility & Physical Disability?",
+      "body_markdown": "Mobility and physical impairments involve conditions that affect a person's physical capacity to move, coordinate actions, manipulate objects, or perform gross and fine motor activities.\n\n### Diverse Forms:\n- **Cerebral Palsy:** Neurological disorders affecting muscle tone, posture, balance, and fine motor skills.\n- **Spinal Cord Injury (Paraplegia / Quadriplegia):** Loss of motor function or sensation below the site of injury.\n- **Limb Loss / Amputation:** Congenital absence or surgical removal of limbs requiring ergonomic prosthetics.\n- **Tremors & Parkinson's Disease:** Involuntary, rhythmic muscle contractions that make delicate finger targeting (such as clicking small touch targets) difficult.\n- **Muscular Dystrophy:** Progressive weakness and degeneration of skeletal muscles.",
+      "easy_read_body": "Physical disability means having trouble moving arms, legs, or hands. Some people use wheelchairs, crutches, or special mouse switches to use computers and move around.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "WHO - Physical Activity and Disability",
+          "url": "https://www.who.int"
+        },
+        {
+          "name": "National Institute for Locomotor Disabilities (NILD), Kolkata",
+          "url": "http://www.nioh.in"
+        }
+      ]
+    },
+    {
+      "id": "mobility-physical-challenge",
+      "category_id": "cat-mobility",
+      "type": "challenge",
+      "title": "Daily-Life Challenges",
+      "body_markdown": "Major environmental and digital barriers include:\n- **Physical Inaccessibility:** Buildings without ramps or elevators, non-standard ramp slopes (>1:12), heavy manual doors, and inaccessible toilets.\n- **Digital Fine-Motor Barriers:** Web applications requiring tiny touch targets (less than 44x44px), time-limited security inputs (e.g., fast CAPTCHAs), or mandatory mouse gestures without keyboard alternatives.\n- **Public Transport Inefficiency:** Lack of wheelchair-accessible buses, wide gaps between train platforms and coaches, and lack of curb ramps on sidewalks.",
+      "easy_read_body": "Stairs without ramps stop wheelchairs. Websites with tiny buttons are hard to click if hands shake. Generous spacing helps everyone.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "Accessible India Campaign (Sugamya Bharat Abhiyan)",
+          "url": "http://accessibleindia.gov.in"
+        }
+      ]
+    },
+    {
+      "id": "mobility-physical-simulation",
+      "category_id": "cat-mobility",
+      "type": "simulation",
+      "title": "Experience It: Tremor Simulator & Keyboard-Only Challenge",
+      "body_markdown": "Try our Motor Tremor Challenge below:\n- Experience clicking small interface buttons while your cursor experiences simulated rhythmic jitter and delay.\n- Alternatively, test your navigation by completing an entire checkout sequence using **only the Tab, Shift+Tab, and Enter keys** without touching your mouse or trackpad.",
+      "easy_read_body": "Test how hard it is to click tiny buttons when your pointer is shaking, showing why large buttons are so important.",
+      "display_order": 3,
+      "sources": []
+    },
+    {
+      "id": "mobility-physical-solution",
+      "category_id": "cat-mobility",
+      "type": "solution",
+      "title": "Solutions and Assistive Technologies",
+      "body_markdown": "Innovative engineering provides versatile ways to interact with computers and the physical world:\n\n### 1. Alternative Input Devices\n- **Sip-and-Puff Systems:** Allows individuals with high-level quadriplegia to send computer clicks and navigate powered wheelchairs using breath pressure.\n- **Eye-Gaze Trackers (e.g., Tobii Dynavox):** High-precision infrared cameras track pupil movement to control mouse cursors and virtual keyboards.\n- **Single-Switch Scanning:** Allows a user with movement in a single muscle (head, chin, or foot) to select letters through timed visual scanning.\n- **Ergonomic Trackballs & Keyboards:** Oversized keys, keyguards to prevent accidental neighboring key presses, and filtered tremor-dampening software.\n\n### 2. Motor-Accessible Web Design\n- Minimum touch target size of 44x44 CSS pixels (WCAG 2.2 Target Size criterion).\n- No time limits without an easy extension mechanism.\n- Logical tab order and highly visible outline focus rings.",
+      "easy_read_body": "People can control computers using eye movements, breath pressure (sip-and-puff), or voice commands. Large buttons and keyboard shortcuts are essential.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "Tobii Dynavox Assistive Technology",
+          "url": "https://www.tobiidynavox.com/"
+        },
+        {
+          "name": "ALIMCO - Artificial Limbs Manufacturing Corporation of India",
+          "url": "https://www.alimco.in/"
+        }
+      ]
+    },
+    {
+      "id": "mobility-physical-resource",
+      "category_id": "cat-mobility",
+      "type": "resource",
+      "title": "Schemes, Rights & Accessible India Campaign",
+      "body_markdown": "### Key Government Initiatives:\n- **Sugamya Bharat Abhiyan (Accessible India Campaign):** National flagship campaign aimed at achieving universal accessibility in built environments, transport ecosystems, and ICT infrastructure.\n- **ALIMCO (Kanpur):** State-owned enterprise manufacturing motorized tricycles, wheelchairs, modular artificial limbs, and crutches under the ADIP scheme.\n- **UDID Card:** Concessions in Indian Railways (up to 75% for orthopedically impaired travelers and an escort).",
+      "easy_read_body": "The Accessible India Campaign builds ramps in schools, offices, and train stations. The government provides free or low-cost wheelchairs and tricycles.",
+      "display_order": 5,
+      "sources": [
+        {
+          "name": "Sugamya Bharat Abhiyan Official Portal",
+          "url": "http://accessibleindia.gov.in"
+        }
+      ]
+    },
+    {
+      "id": "mobility-physical-tool",
+      "category_id": "cat-mobility",
+      "type": "tool",
+      "title": "Try It: Built-in Single-Switch Scanning & Voice Navigation",
+      "body_markdown": "Experience our integrated assistive tools:\n- **Single-Switch & Scanning Simulator:** Test how single-switch auto-scanning enables typing with just one button or spacebar press.\n- **Voice Navigation:** Control Sahay completely hands-free by speaking commands (\"scroll down\", \"open categories\", \"read\").",
+      "easy_read_body": "Try typing with only one button, or speak voice commands to navigate without using your hands.",
+      "display_order": 6,
+      "sources": []
+    },
+    {
+      "id": "mobility-physical-myth_fact",
+      "category_id": "cat-mobility",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities in Physical Disability",
+      "body_markdown": "### Myth 1: \"All wheelchair users are completely paralyzed and cannot walk at all.\"\n**Fact:** Many wheelchair users are ambulatory wheelchair users—they can stand or walk short distances with canes or braces, but rely on wheelchairs for stamina and pain management.\n\n### Myth 2: \"People with motor tremors simply need to try harder to hold still.\"\n**Fact:** Neurological tremors (such as in Parkinson's or essential tremor) are involuntary and often intensify with intentional effort. Assistive software filtering is essential.\n\n### Myth 3: \"Making websites accessible for motor disabilities requires complex redesigns.\"\n**Fact:** Ensuring buttons are at least 44x44 pixels, providing clear focus indicators, and supporting full keyboard tab navigation benefits everyone.",
+      "easy_read_body": "Myth: All wheelchair users can never stand up. Fact: Many can walk short distances but need wheels for longer travel. Big buttons help hands that shake.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "United Spinal Association",
+          "url": "https://unitedspinal.org/"
+        }
+      ]
+    }
+  ],
+  "speech-language": [
+    {
+      "id": "speech-language-overview",
+      "category_id": "cat-speech",
+      "type": "overview",
+      "title": "What is Speech & Language Impairment?",
+      "body_markdown": "Speech and language impairments cover conditions affecting spoken communication, verbal fluency, and linguistic comprehension. These conditions include:\n- **Apraxia of Speech:** A motor neurological disorder where the brain has difficulty planning and sequencing the muscle movements needed to speak.\n- **Dysarthria:** Muscle weakness, paralysis, or discoordination (often following stroke, cerebral palsy, or brain injury) causing slurred, quiet, or strained pronunciation.\n- **Aphasia:** Language impairment affecting the ability to comprehend, retrieve words (anomia), or formulate spoken sentences.\n- **Stuttering / Dysfluency:** Interruptions in the flow of speech, sound repetitions, and physical blocks.\n- **Selective Mutism / Non-speaking Autism:** Inability to produce spoken speech in specific or all social settings.",
+      "easy_read_body": "Some people have difficulty pronouncing words or speaking out loud. Picture cards, speech apps, and communication boards help them speak and share their feelings.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "AIISH Mysore - All India Institute of Speech and Hearing",
+          "url": "https://aiishmysore.in/"
+        },
+        {
+          "name": "American Speech-Language-Hearing Association (ASHA)",
+          "url": "https://www.asha.org/"
+        }
+      ]
+    },
+    {
+      "id": "speech-language-challenge",
+      "category_id": "cat-speech",
+      "type": "challenge",
+      "title": "Daily-Life Communication Challenges & Barriers",
+      "body_markdown": "Individuals with speech and communication impairments face pervasive social and technological barriers:\n- **Time Pressure in Social Interactions:** Listeners impatiently interrupting, speaking over, or attempting to finish sentences before an AAC user finishes constructing their message.\n- **Voice-Only Automated Services (IVR):** Banking helplines, telecommunication support, and government hotlines that require verbal responses with no accessible keypad or digital chat fallback.\n- **Emergency Situations:** Extreme vulnerability when attempting to dial emergency numbers (112/100) or report medical allergies without a voice communicator.\n- **Misjudged Intelligence:** Strangers frequently mistaking speech disfluencies or slurring for cognitive impairment or lack of understanding.",
+      "easy_read_body": "Talking fast or interrupting makes it hard for people using picture boards to answer. Automated phone calls that only listen to voices are impossible without typing options.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "Communication Matters UK",
+          "url": "https://www.communicationmatters.org.uk/"
+        }
+      ]
+    },
+    {
+      "id": "speech-language-simulation",
+      "category_id": "cat-speech",
+      "type": "simulation",
+      "title": "Experience AAC Symbol Communication & Dysfluency",
+      "body_markdown": "Test how non-verbal individuals construct messages using high-contrast pictogram symbols, and experience how speech dysfluencies (stutter, dysarthria, apraxia) alter voice synthesis timing and clarity.",
+      "easy_read_body": "Try building messages using picture cards and hear the computer speak them out loud.",
+      "display_order": 3,
+      "sources": []
+    },
+    {
+      "id": "speech-language-solution",
+      "category_id": "cat-speech",
+      "type": "solution",
+      "title": "Solutions & Augmentative and Alternative Communication (AAC)",
+      "body_markdown": "Modern assistive technology empowers non-speaking individuals through multimodal communication:\n- **High-Tech AAC Communicators:** Dedicated touchscreen devices or tablet apps (e.g., Avaz India, TouchChat) that synthesize natural spoken sentences from pictogram symbol grids.\n- **Eye-Gaze Speech Synthesizers:** Specialized cameras tracking corneal reflections so users with ALS or cerebral palsy can type and speak entirely with eye movements.\n- **Low-Tech Picture Exchange (PECS):** Tactile binders with removable velcro visual symbol cards for spontaneous communication across environments.\n- **Voice Banking:** Recording and preserving an individual's natural vocal timbre before progressive neurodegenerative diseases impact verbal speech.",
+      "easy_read_body": "Tablet computers that speak when you tap picture cards, eye-tracking screens that know what you look at, and voice apps help non-verbal people communicate easily.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "Avaz India AAC",
+          "url": "https://www.avazapp.com/"
+        },
+        {
+          "name": "Tobii Dynavox AAC Solutions",
+          "url": "https://www.tobiidynavox.com/"
+        }
+      ]
+    },
+    {
+      "id": "speech-language-tool",
+      "category_id": "cat-speech",
+      "type": "tool",
+      "title": "Try It: Built-in AAC Picture Board & Speech Synthesizer",
+      "body_markdown": "Experience Sahay's built-in AAC Picture Communication Board located in the Tools suite. You can build multi-symbol sentences (\"I want food\", \"Please help\", \"Thank you\") and hear them spoken aloud in Hindi, Telugu, or English with instant TTS synthesis.",
+      "easy_read_body": "Click on symbol cards to build a sentence and press Speak to hear it spoken in Hindi, Telugu, or English.",
+      "display_order": 5,
+      "sources": []
+    },
+    {
+      "id": "speech-language-resource",
+      "category_id": "cat-speech",
+      "type": "resource",
+      "title": "Resources, Rights & Support in India",
+      "body_markdown": "### Legal Recognition & National Institutions:\n- **RPwD Act 2016:** Recognizes Speech and Language Disability as a specified disability eligible for Unique Disability ID (UDID) certification and 4% reservation in government employment.\n- **AIISH Mysore (All India Institute of Speech and Hearing):** An autonomous institute under the Ministry of Health and Family Welfare offering diagnostic assessment, tele-speech therapy, and AAC prescription.\n- **ADIP Scheme:** Government financial assistance providing free or subsidized electronic speech generating devices, communicators, and laptops for eligible individuals.",
+      "easy_read_body": "The Indian government provides the UDID card and free speech communicators through AIISH Mysore and the ADIP scheme.",
+      "display_order": 6,
+      "sources": [
+        {
+          "name": "AIISH Mysore Official Portal",
+          "url": "https://aiishmysore.in/"
+        },
+        {
+          "name": "DEPwD Speech Disability Guidelines",
+          "url": "https://disabilityaffairs.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "speech-language-myth_fact",
+      "category_id": "cat-speech",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities in Speech & Language",
+      "body_markdown": "### Myth 1: \"If someone cannot speak verbally, they cannot understand what is being said.\"\n**Fact:** Expressive speech (oral-motor muscle coordination) and receptive language (comprehension) are handled by completely different neurological systems. Non-verbal people often understand every word spoken.\n\n### Myth 2: \"Using an AAC device will stop a child from ever learning to talk.\"\n**Fact:** Decades of clinical research show that AAC usage actually encourages and accelerates natural speech development by reducing frustration and reinforcing sentence construction.\n\n### Myth 3: \"Stuttering is caused by psychological nervousness or lack of confidence.\"\n**Fact:** Stuttering is a neurodevelopmental motor speech difference involving genetic factors and brain wiring, not an emotional weakness.",
+      "easy_read_body": "Myth: People who do not speak cannot understand you. Fact: They understand everything and use picture boards to express their thoughts.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "National Stuttering Association",
+          "url": "https://westutter.org/"
+        }
+      ]
+    }
+  ],
+  "learning-disabilities": [
+    {
+      "id": "learning-disabilities-overview",
+      "category_id": "cat-learning",
+      "type": "overview",
+      "title": "Understanding Specific Learning Disabilities (SLD)",
+      "body_markdown": "Specific Learning Disabilities (SLDs) are neurodevelopmental conditions that affect how the brain processes, stores, and communicates information. SLDs are lifelong differences that are completely independent of intelligence:\n- **Dyslexia:** Affects accurate and fluent word reading, decoding, and spelling due to differences in phonological processing.\n- **Dysgraphia:** Affects handwriting legibility, spatial organization on paper, and fine-motor coordination during writing.\n- **Dyscalculia:** Affects comprehension of numerical concepts, arithmetic calculations, time measurement, and spatial reasoning.\n- **Non-Verbal Learning Disability (NVLD):** Involves challenges in visual-spatial, non-verbal social cueing, and motor planning.",
+      "easy_read_body": "Learning differences like dyslexia mean letters or numbers can look confusing or jumbled. Clean fonts, reading rulers, and audiobooks make learning fun and easy.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "National Institute for the Empowerment of Persons with Intellectual Disabilities (NIEPID)",
+          "url": "https://niepid.nic.in/"
+        },
+        {
+          "name": "International Dyslexia Association",
+          "url": "https://dyslexiaida.org/"
+        }
+      ]
+    },
+    {
+      "id": "learning-disabilities-challenge",
+      "category_id": "cat-learning",
+      "type": "challenge",
+      "title": "Daily-Life Challenges & Systemic Barriers",
+      "body_markdown": "People with learning disabilities encounter significant friction in academic, professional, and civic spaces:\n- **Dense, Low-Contrast Typography:** Crowded blocks of text with tight line-spacing cause visual crowding, letter reversals (b/d, p/q), and cognitive reading exhaustion.\n- **Rigid Examination Systems:** Academic evaluations that strictly penalize handwriting and spelling errors rather than testing conceptual mastery.\n- **Complex Bureaucratic Paperwork:** Dense government forms, legal contracts, and terms of service written in convoluted language without plain-English or easy-read summaries.\n- **Underdiagnosis & Social Stigma:** Children frequently being wrongly labeled as \"lazy\" or \"inattentive\" before receiving timely diagnostic psycho-educational evaluation.",
+      "easy_read_body": "Reading tiny crowded words causes eyes and brains to feel very tired. School exams that deduct marks for spelling make it hard for smart students to show what they know.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "NCERT Guidelines for Children with Disabilities",
+          "url": "https://ncert.nic.in/"
+        }
+      ]
+    },
+    {
+      "id": "learning-disabilities-simulation",
+      "category_id": "cat-learning",
+      "type": "simulation",
+      "title": "Experience Dyslexia Letter-Jitter & Reading Rulers",
+      "body_markdown": "Experience how letters dynamically jitter, rotate, and swap positions, demonstrating cognitive reading fatigue and how high-contrast reading rulers restore focus.",
+      "easy_read_body": "See how text can look when letters jump around, and use a reading ruler to keep your place.",
+      "display_order": 3,
+      "sources": []
+    },
+    {
+      "id": "learning-disabilities-solution",
+      "category_id": "cat-learning",
+      "type": "solution",
+      "title": "Solutions & Assistive Technologies for Learning Differences",
+      "body_markdown": "Assistive technologies transform learning for individuals with SLD:\n- **Dyslexia-Optimized Fonts:** Fonts with weighted bottoms and distinctive character shapes (e.g., OpenDyslexic, Lexend) that anchor letters and prevent mental rotation.\n- **Digital Reading Rulers & Bionic Reading:** Highlighting one line at a time while tinting surrounding lines reduces visual crowding and tracks reading position.\n- **Text-to-Speech (TTS) & Sugamya Pustakalaya:** Dual auditory and visual immersion reinforces decoding and vocabulary retention.\n- **Speech-to-Text Dictation & Mind Mapping:** Voice dictation tools enable thinkers with dysgraphia to draft comprehensive essays without handwriting fatigue.",
+      "easy_read_body": "Special fonts that do not jump, screen rulers that guide your eyes line by line, and speech readers make reading enjoyable for everyone.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "British Dyslexia Association Technology Guide",
+          "url": "https://www.bdadyslexia.org.uk/"
+        },
+        {
+          "name": "Sugamya Pustakalaya Audiobooks",
+          "url": "https://sugamyapustakalaya.in/"
+        }
+      ]
+    },
+    {
+      "id": "learning-disabilities-tool",
+      "category_id": "cat-learning",
+      "type": "tool",
+      "title": "Try It: Built-in Text-to-Speech & Font Switcher",
+      "body_markdown": "Test Sahay's built-in Text-to-Speech reader and the Dyslexia Font toggle in the Accessibility Settings drawer. Click the \"Listen\" button on any topic to hear text read aloud while sentences are highlighted.",
+      "easy_read_body": "Turn on the OpenDyslexic font or listen to any section using the speech reader button.",
+      "display_order": 5,
+      "sources": []
+    },
+    {
+      "id": "learning-disabilities-resource",
+      "category_id": "cat-learning",
+      "type": "resource",
+      "title": "Legal Accommodations & Rights in India",
+      "body_markdown": "### Rights under the RPwD Act 2016 & Examination Boards:\n- **CBSE, ICSE & State Board Accommodations:** Mandatory 20 minutes compensatory extra time per hour, exemption from third language requirements, provision of scribes/readers, and use of calculators for dyscalculia.\n- **Higher Education Rights:** 5% reservation in government higher education institutions under Section 32 of the RPwD Act.\n- **UDID Certification:** Specific Learning Disabilities are assessed through NIMHANS index and standardized battery tests for certification.",
+      "easy_read_body": "Indian school boards give extra time in exams, permission to use computers or writers, and calculator support for students with learning differences.",
+      "display_order": 6,
+      "sources": [
+        {
+          "name": "CBSE Examination Bye-Laws for CWSN",
+          "url": "https://www.cbse.gov.in/"
+        },
+        {
+          "name": "NIEPID Secunderabad Portal",
+          "url": "https://niepid.nic.in/"
+        }
+      ]
+    },
+    {
+      "id": "learning-disabilities-myth_fact",
+      "category_id": "cat-learning",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities in Dyslexia",
+      "body_markdown": "### Myth 1: \"Dyslexia is an eye problem that can be cured with vision therapy or special tinted glasses.\"\n**Fact:** Dyslexia is a neurobiological difference in the brain's language processing centers, not a physical defect in the eyes or optic nerves.\n\n### Myth 2: \"People with dyslexia are not intelligent.\"\n**Fact:** Intelligence and dyslexia are completely unrelated. Many of history's greatest scientists, entrepreneurs, and artists (such as Albert Einstein, Steve Jobs, and Agatha Christie) had dyslexia.\n\n### Myth 3: \"Dyslexia is just writing letters backwards (like writing 'b' as 'd').\"\n**Fact:** While letter reversals are common in early childhood development, dyslexia is primarily a challenge with phoneme-grapheme association and rapid word naming.",
+      "easy_read_body": "Myth: People with dyslexia cannot be smart. Fact: Many famous scientists and artists have dyslexia. It just means their brains think creatively in pictures.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "Yale Center for Dyslexia & Creativity",
+          "url": "https://dyslexia.yale.edu/"
+        }
+      ]
+    }
+  ],
+  "adhd": [
+    {
+      "id": "adhd-overview",
+      "category_id": "cat-adhd",
+      "type": "overview",
+      "title": "Understanding ADHD & Executive Functioning",
+      "body_markdown": "Attention Deficit Hyperactivity Disorder (ADHD) is a neurodevelopmental difference characterized by atypical dopamine and norepinephrine regulation in the brain's prefrontal cortex. This affects executive functioning:\n- **Working Memory:** Holding information in mind while performing multistep operations.\n- **Task Initiation & Sustained Attention:** Initiating tasks that lack immediate novelty or urgency, and sustaining focus through non-stimulating activities.\n- **Hyperfocus:** Intense, absorption-level focus on deeply engaging tasks where awareness of time and surroundings disappears.\n- **Impulse & Emotional Regulation:** Managing spontaneous reactions and experiencing intense emotional responses to rejection (Rejection Sensitive Dysphoria).",
+      "easy_read_body": "ADHD makes it hard to sit still or keep attention when there are too many noises or popups. Breaking tasks into small steps and using timers helps a lot.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "NIMHANS Department of Child & Adolescent Psychiatry",
+          "url": "https://nimhans.ac.in/"
+        },
+        {
+          "name": "CHADD - Children and Adults with ADHD",
+          "url": "https://chadd.org/"
+        }
+      ]
+    },
+    {
+      "id": "adhd-challenge",
+      "category_id": "cat-adhd",
+      "type": "challenge",
+      "title": "Daily-Life Challenges & Sensory Distractions",
+      "body_markdown": "Modern digital environments and workplaces present acute friction points for ADHD:\n- **Notification Barrage & Context Switching:** Constant digital pings, flashing advertisements, and auto-playing videos derail trains of thought and trigger cognitive exhaustion.\n- **Time Blindness:** Difficulty sensing the passage of time without external visual timers, causing chronic lateness and deadline stress.\n- **Executive Dysfunction Paralysis:** Feeling completely overwhelmed when facing vague, unstructured assignments with multiple open-ended steps.\n- **Workplace Stigma:** Being unfairly criticized as undisciplined, forgetful, or careless despite working under tremendous cognitive strain.",
+      "easy_read_body": "Loud screens with flashing ads make it hard to focus on homework or jobs. Forgetting how fast time is passing creates stress.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "ADHD Foundation Neurodiversity Charity",
+          "url": "https://www.adhdfoundation.org.uk/"
+        }
+      ]
+    },
+    {
+      "id": "adhd-simulation",
+      "category_id": "cat-adhd",
+      "type": "simulation",
+      "title": "Experience ADHD Focus Mode vs Distractions",
+      "body_markdown": "Test your comprehension when navigating a chaotic interface with simulated popups and sensory chatter, compared directly to a stripped-down Focus Mode reader.",
+      "easy_read_body": "Compare reading with noisy pop-ups versus a calm, quiet reading page.",
+      "display_order": 3,
+      "sources": []
+    },
+    {
+      "id": "adhd-solution",
+      "category_id": "cat-adhd",
+      "type": "solution",
+      "title": "Solutions, Organizational Tools & Focus Aids",
+      "body_markdown": "Effective accommodations remove friction and anchor attention:\n- **Distraction-Free Reader Modes:** Stripping web pages down to essential typography without sidebars, advertisements, or animations.\n- **Visual Timers (Time Timer):** Colored disappearing disks showing the visual volume of remaining time rather than abstract numbers.\n- **Task Chunking & Kanban Boards:** Breaking complex projects into bite-sized, single-action checklist items.\n- **Soundscapes & Brown Noise:** Continuous low-frequency audio that masks sudden unpredictable ambient noises without causing auditory fatigue.",
+      "easy_read_body": "Visual timers that show time like a pie chart, checklists with one task at a time, and quiet background sounds help keep the brain calm and focused.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "ADDitude Magazine Assistive Tech Guide",
+          "url": "https://www.additudemag.com/"
+        }
+      ]
+    },
+    {
+      "id": "adhd-tool",
+      "category_id": "cat-adhd",
+      "type": "tool",
+      "title": "Try It: Built-in Easy-Read & Reduce Motion Controls",
+      "body_markdown": "Enable Easy-Read Mode at the top of any Sahay topic to instantly distill complex documentation into concise, bulleted explanations. You can also turn on Reduce Motion in accessibility settings to pause all CSS animations.",
+      "easy_read_body": "Turn on Easy-Read or Reduce Motion to make pages cleaner, simpler, and free of moving graphics.",
+      "display_order": 5,
+      "sources": []
+    },
+    {
+      "id": "adhd-resource",
+      "category_id": "cat-adhd",
+      "type": "resource",
+      "title": "Rights, Workplace Adjustments & Clinical Support",
+      "body_markdown": "### Support Frameworks in India:\n- **RPwD Act 2016 & NEP 2020:** Mandates inclusive classroom practices, individualized education plans (IEPs), and positive behavioral supports.\n- **Reasonable Accommodation:** Right to request quiet workspace allocation, noise-cancelling headphone allowances, and flexible task pacing in employment.\n- **NIMHANS Tele-MANAS:** National mental health network offering clinical consultation and diagnostic guidance for executive functioning.",
+      "easy_read_body": "Schools and offices can provide quiet desks, headphones, and flexible hours to help people with ADHD work at their best.",
+      "display_order": 6,
+      "sources": [
+        {
+          "name": "NIMHANS Official Portal",
+          "url": "https://nimhans.ac.in/"
+        },
+        {
+          "name": "Tele-MANAS Government of India",
+          "url": "https://telemanas.mohfw.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "adhd-myth_fact",
+      "category_id": "cat-adhd",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities in ADHD",
+      "body_markdown": "### Myth 1: \"ADHD is just an excuse for being lazy or undisciplined.\"\n**Fact:** ADHD is a neurochemical condition involving dopamine receptor variances. Brain imaging scans clearly demonstrate physical differences in frontal lobe activation.\n\n### Myth 2: \"Only hyperactive boys have ADHD, and you outgrow it as an adult.\"\n**Fact:** ADHD affects people of all genders and ages. In girls and adults, it frequently presents as inattentiveness, racing thoughts, and internal restlessness rather than physical hyperactivity.\n\n### Myth 3: \"If someone can play video games for 5 hours, they don't have ADHD.\"\n**Fact:** Video games provide rapid, continuous dopamine feedback loops that stimulate ADHD brains. The difficulty is not a lack of attention, but an inability to voluntarily regulate attention toward low-stimulation tasks.",
+      "easy_read_body": "Myth: ADHD means someone is lazy. Fact: Their brain simply needs the right kind of stimulation, structure, and calm tools to shine.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "ADDitude Magazine Myths and Facts",
+          "url": "https://www.additudemag.com/"
+        }
+      ]
+    }
+  ],
+  "autism-spectrum": [
+    {
+      "id": "autism-spectrum-overview",
+      "category_id": "cat-autism",
+      "type": "overview",
+      "title": "Understanding Autism Spectrum & Neurodiversity",
+      "body_markdown": "Autism Spectrum Disorder (ASD) is a lifelong neurodevelopmental variation characterized by distinct perceptual, social, and communicative patterns. Seen through the lens of neurodiversity, autism is a natural form of human cognitive variation:\n- **Sensory Processing Differences:** Heightened sensitivity (hyper-reactivity) or reduced sensitivity (hypo-reactivity) to visual lights, auditory frequencies, tactile textures, or smells.\n- **Direct & Honest Communication:** Preference for clear, unambiguous communication without subtext, sarcasm, or neurotypical unwritten social conventions.\n- **Monotropic Focus & Deep Passions:** Exceptional capacity for intense, specialized focus on areas of deep passion and intellectual interest.\n- **Need for Predictability:** Deriving comfort and psychological safety from clear schedules, predictable routines, and explicit transition notices.",
+      "easy_read_body": "Autism means experiencing the world with unique senses. Loud noises and bright lights can feel very strong. Predictable routines and quiet spaces help autistic people feel safe and happy.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "National Trust for the Welfare of Persons with Autism (Govt of India)",
+          "url": "https://thenationaltrust.gov.in/"
+        },
+        {
+          "name": "Autistic Self Advocacy Network (ASAN)",
+          "url": "https://autisticadvocacy.org/"
+        }
+      ]
+    },
+    {
+      "id": "autism-spectrum-challenge",
+      "category_id": "cat-autism",
+      "type": "challenge",
+      "title": "Daily-Life Challenges & Sensory Overload",
+      "body_markdown": "Everyday public and digital spaces are frequently engineered without sensory accessibility:\n- **Sensory Overload & Meltdowns:** Fluorescent lighting hums, echoey public buildings, flashing signs, and crowds can overwhelm the nervous system, leading to involuntary shutdowns or meltdowns.\n- **The \"Double Empathy Problem\":** Mutual communication breakdowns occurring because neurotypical and autistic people naturally communicate differently, often wrongly blamed entirely on the autistic person.\n- **Forced Eye Contact & Masking:** Social expectations requiring uncomfortable eye contact and \"masking\" (suppressing natural stimming behaviors like hand-flapping or rocking) which causes deep mental exhaustion.\n- **Abrupt Routine Disruption:** Unexpected changes in plans or digital UI updates without advance warning create intense disorientation and anxiety.",
+      "easy_read_body": "Crowded places with loud sounds and flashing lights can cause sensory overload. Having to hide your natural habits is very tiring.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "National Autistic Society UK",
+          "url": "https://www.autism.org.uk/"
+        }
+      ]
+    },
+    {
+      "id": "autism-spectrum-simulation",
+      "category_id": "cat-autism",
+      "type": "simulation",
+      "title": "Experience Sensory Overload Awareness",
+      "body_markdown": "Experience an educational simulation illustrating auditory and visual sensory sensitivities, featuring competing audio streams, flickering visuals, and an instant emergency stop button.",
+      "easy_read_body": "See how overwhelming too many sounds and lights can feel, with a red button to stop anytime.",
+      "display_order": 3,
+      "sources": []
+    },
+    {
+      "id": "autism-spectrum-solution",
+      "category_id": "cat-autism",
+      "type": "solution",
+      "title": "Solutions, Sensory Spaces & Inclusive Design",
+      "body_markdown": "Creating autism-inclusive environments involves proactive accommodation:\n- **Sensory De-Escalation Spaces:** Quiet sensory rooms with dimmed warm lighting, weighted blankets, and noise-dampening panels in airports, schools, and offices.\n- **Visual Task Schedules & Social Stories:** Step-by-step visual roadmaps depicting exactly what will happen during an upcoming visit, medical procedure, or journey.\n- **Digital Predictability:** Websites with stable layouts, zero auto-playing media, muted pastel or dark color options, and clear error messages without harsh red warning alarms.\n- **Acceptance of Stimming:** Normalizing self-regulatory behaviors (stimming, fidget tools, wearing sunglasses indoors) as healthy nervous system regulation.",
+      "easy_read_body": "Quiet rooms with soft lights, noise-cancelling headphones, and pictures showing what will happen next help autistic people participate comfortably.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "Sugamya Bharat Built Environment Guidelines",
+          "url": "http://accessibleindia.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "autism-spectrum-tool",
+      "category_id": "cat-autism",
+      "type": "tool",
+      "title": "Try It: High-Contrast Themes & Emergency Assistance Cards",
+      "body_markdown": "Switch between Dark Mode and Yellow-on-Black themes using Sahay's top accessibility drawer to eliminate harsh white glare. You can also generate a customized Emergency Assistance Card in the Tools suite.",
+      "easy_read_body": "Switch to dark screen themes to protect your eyes from bright glare, or make a personal helper card.",
+      "display_order": 5,
+      "sources": []
+    },
+    {
+      "id": "autism-spectrum-resource",
+      "category_id": "cat-autism",
+      "type": "resource",
+      "title": "Government Schemes & Legal Protection in India",
+      "body_markdown": "### National Schemes under The National Trust & RPwD Act:\n- **Niramaya Health Insurance:** Comprehensive health insurance scheme providing up to ₹1,00,000 coverage per year for individuals with autism.\n- **Samarth Respite Care Scheme:** Providing temporary relief and residential respite care for families and caregivers of autistic individuals.\n- **RPwD Act 2016:** Recognizes Autism Spectrum Disorder as a specified benchmark disability with legal protections against discrimination in education and employment.",
+      "easy_read_body": "The National Trust of India offers the Niramaya insurance card for free medical treatment up to ₹1,00,000 for people with autism.",
+      "display_order": 6,
+      "sources": [
+        {
+          "name": "The National Trust Official Portal",
+          "url": "https://thenationaltrust.gov.in/"
+        },
+        {
+          "name": "Niramaya Scheme Portal",
+          "url": "https://thenationaltrust.gov.in/content/scheme/niramaya.php"
+        }
+      ]
+    },
+    {
+      "id": "autism-spectrum-myth_fact",
+      "category_id": "cat-autism",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities in Autism",
+      "body_markdown": "### Myth 1: \"Autistic people do not feel empathy or want social connections.\"\n**Fact:** Autistic people often experience profound, overwhelming empathy (hyper-empathy). Communication styles differ, but the human desire for meaningful connection and love is universal.\n\n### Myth 2: \"Autism only affects children; there are no autistic adults.\"\n**Fact:** Autism is a lifelong neurodevelopmental difference. Autistic children grow up to be autistic adults, contributing as programmers, writers, artists, and leaders.\n\n### Myth 3: \"All autistic people are either non-verbal or savants like Rain Man.\"\n**Fact:** Autism is a wide spectrum with infinite combinations of strengths and support needs. Stereotypes fail to capture the rich diversity of the autistic community.",
+      "easy_read_body": "Myth: Autistic people do not care about others. Fact: Autistic people care very deeply and feel emotions strongly.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "Autistic Self Advocacy Network Myths & Facts",
+          "url": "https://autisticadvocacy.org/"
+        }
+      ]
+    }
+  ],
+  "mental-health": [
+    {
+      "id": "mental-health-overview",
+      "category_id": "cat-mental-health",
+      "type": "overview",
+      "title": "Understanding Mental Health & Emotional Well-being",
+      "body_markdown": "Mental health conditions encompass conditions affecting mood, cognitive processing, stress response, and psychological equilibrium. These include major depressive disorder, generalized anxiety, panic disorder, bipolar disorder, and PTSD:\n- **Energy & Cognitive Load:** Depression and acute stress severely deplete dopamine and serotonin, causing physical lethargy, brain fog, and executive paralysis.\n- **Fight-or-Flight Hyperarousal:** Panic and anxiety trigger the sympathetic nervous system, inducing hyperventilation, racing heart, and catastrophic cognitive loops.\n- **Autonomic Grounding:** Using the five physical senses and controlled respiration to down-regulate the nervous system and anchor attention into immediate safety.",
+      "easy_read_body": "Mental health means feeling safe, calm, and emotionally balanced. When worry or sadness becomes too heavy, gentle breathing and friendly helplines provide comfort.",
+      "display_order": 1,
+      "sources": [
+        {
+          "name": "World Health Organization (WHO) - Mental Health",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"
+        },
+        {
+          "name": "National Institute of Mental Health and Neurosciences (NIMHANS)",
+          "url": "https://nimhans.ac.in/"
+        }
+      ]
+    },
+    {
+      "id": "mental-health-challenge",
+      "category_id": "cat-mental-health",
+      "type": "challenge",
+      "title": "Daily-Life Challenges & Psychological Barriers",
+      "body_markdown": "Individuals navigating mental health conditions face both acute physiological symptoms and harsh societal barriers:\n- **Panic Attacks in Crowded Public Spaces:** Sudden surges of fear in packed buses, subways, or high-pressure workplaces without access to calm de-escalation spaces.\n- **Cognitive Exhaustion & Motivation Paralysis:** Tasks that seem simple to others (opening mail, responding to emails, eating meals) feeling like insurmountable mountains during depressive episodes.\n- **High-Stress Digital Interfaces:** Websites with aggressive countdown timers, flashing alerts, and unhelpful error messages that trigger panic in users with anxiety.\n- **Deep Social Stigma & Fear of Disclosing:** Pervasive fear of being judged as weak, unreliable, or unfit for employment, preventing millions from seeking timely clinical support.",
+      "easy_read_body": "Feeling panic in crowded places or feeling too exhausted to get out of bed is very hard. Websites with loud countdown timers make anxiety worse.",
+      "display_order": 2,
+      "sources": [
+        {
+          "name": "The Lancet Commission on Stigma and Mental Health",
+          "url": "https://www.thelancet.com/"
+        }
+      ]
+    },
+    {
+      "id": "mental-health-simulation",
+      "category_id": "cat-mental-health",
+      "type": "simulation",
+      "title": "Experience 5-4-3-2-1 Sensory Grounding & Crisis Support",
+      "body_markdown": "Practice the clinically proven 5-4-3-2-1 multi-sensory grounding exercise with calming audio chimes, follow the 4-4-4-4 Box Breathing visual pacer, and create your own Emergency Assistance Card.",
+      "easy_read_body": "Use our soothing breathing pacer and grounding exercise to feel calm and relaxed.",
+      "display_order": 3,
+      "sources": []
+    },
+    {
+      "id": "mental-health-solution",
+      "category_id": "cat-mental-health",
+      "type": "solution",
+      "title": "Solutions, Low-Stress Interfaces & De-Escalation Aids",
+      "body_markdown": "Designing compassionate environments supports emotional resilience and healing:\n- **Sensory Grounding & Box Breathing:** 4-4-4-4 diaphragmatic breathing (Inhale 4s, Hold 4s, Exhale 4s, Hold 4s) signals the vagus nerve to slow heart rate and lower cortisol.\n- **Emergency Crisis / Assistance Cards:** Wallet cards or digital lock-screen cards detailing emergency contacts, psychiatrist information, and non-judgmental instructions for bystanders.\n- **Calm, Forgiving UI Design:** Interfaces that offer generous session timeouts, auto-saving drafts, reversible actions (\"Undo\"), and reassuring microcopy.\n- **24/7 Professional Helplines:** Instant access to qualified mental health counselors via toll-free national helplines.",
+      "easy_read_body": "Box breathing exercises, soft soothing screen colors, and saving emergency phone numbers on a card help you stay calm and safe.",
+      "display_order": 4,
+      "sources": [
+        {
+          "name": "NIMHANS Clinical Guidelines for Stress & Anxiety",
+          "url": "https://nimhans.ac.in/"
+        },
+        {
+          "name": "Tele-MANAS Guidelines",
+          "url": "https://telemanas.mohfw.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "mental-health-tool",
+      "category_id": "cat-mental-health",
+      "type": "tool",
+      "title": "Try It: Built-in Grounding Pacer & Emergency Medical Card",
+      "body_markdown": "Access Sahay's Emergency Medical ID tool in the Tools Hub to create an Emergency Crisis Card with your emergency contacts, calm de-escalation tips, and print-ready layout. You can also use our interactive Box Breathing pacer in the Mental Health Simulator.",
+      "easy_read_body": "Create your free emergency helper card or try the calming breathing circle right now.",
+      "display_order": 5,
+      "sources": []
+    },
+    {
+      "id": "mental-health-resource",
+      "category_id": "cat-mental-health",
+      "type": "resource",
+      "title": "Legal Rights, Mental Healthcare Act 2017 & 24/7 Helplines in India",
+      "body_markdown": "### 24/7 Free National Helplines:\n- **KIRAN Mental Health Helpline:** **1800-599-0019** (24/7 National toll-free helpline by DEPwD, offering support in 13 Indian languages).\n- **Tele-MANAS (Govt of India):** **14416** or **1800-891-4416** (24/7 tele-mental health counseling by Ministry of Health and Family Welfare).\n- **Vandrevala Foundation:** **+91 9999 666 555** (24/7 crisis support).\n\n### Key Legal Protections under the Mental Healthcare Act 2017:\n- **Right to Advance Directive:** Every individual has the legal right to state in advance how they wish to be cared for during mental health crises and appoint a nominated representative.\n- **Decriminalization of Suicide (Section 115):** Explicitly states that any person who attempts suicide is presumed to be under severe stress and shall not be prosecuted or punished.\n- **RPwD Act 2016:** Recognizes Mental Illness as a specified disability eligible for equal workplace accommodations and non-discrimination.",
+      "easy_read_body": "Call the free national helpline KIRAN at 1800-599-0019 or Tele-MANAS at 14416 anytime for free, kind help from a counselor.",
+      "display_order": 6,
+      "sources": [
+        {
+          "name": "KIRAN Helpline Portal",
+          "url": "http://disabilityaffairs.gov.in"
+        },
+        {
+          "name": "Tele-MANAS Official Portal",
+          "url": "https://telemanas.mohfw.gov.in/"
+        }
+      ]
+    },
+    {
+      "id": "mental-health-myth_fact",
+      "category_id": "cat-mental-health",
+      "type": "myth_fact",
+      "title": "Common Myths vs. Realities in Mental Health",
+      "body_markdown": "### Myth 1: \"Mental health disorders are personal weaknesses; you can snap out of it if you try harder.\"\n**Fact:** Mental health conditions are complex medical disorders involving neurobiology, genetics, and life stress. They require compassionate therapy, social support, and medical care—not willpower alone.\n\n### Myth 2: \"People with mental illness are unpredictable and dangerous.\"\n**Fact:** The vast majority of people with mental health conditions are non-violent. In fact, they are over 10 times more likely to be victims of violence and discrimination than perpetrators.\n\n### Myth 3: \"Seeking psychological help means you are crazy or brings shame to your family.\"\n**Fact:** Seeking support is an act of courage and self-awareness. Taking care of your mind is just as natural and necessary as visiting a doctor for a physical illness.",
+      "easy_read_body": "Myth: Asking for help with sadness or worry is weak. Fact: Talking to a counselor is very brave and helps you feel better, just like seeing a doctor for a fever.",
+      "display_order": 7,
+      "sources": [
+        {
+          "name": "NIMHANS Mental Health Awareness & Myths",
+          "url": "https://nimhans.ac.in/"
+        }
+      ]
+    }
+  ]
+};
+
+export const staticCategoryMedia = {
+  "visual-impairment": [
+    {
+      "id": "med-vis-1",
+      "category_id": "cat-visual",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/g6j8FmHjG1E",
+      "title": "How a Blind Person Uses a Screen Reader and Smartphone",
+      "alt_text": "Demonstration of a smartphone using VoiceOver screen reader at high speech rate with gestural navigation.",
+      "caption": "Screen readers speak on-screen elements aloud and support gestural swipes for navigation.",
+      "transcript": "Transcript: The presenter explains how accessibility gestures work on modern touchscreens and demonstrates navigating apps using synthesized speech feedback.",
+      "source_credit": "Tommy Edison Experience / Accessible Tech Channel"
+    }
+  ],
+  "hearing-impairment": [
+    {
+      "id": "med-hear-1",
+      "category_id": "cat-hearing",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/d3e23N_p84w",
+      "title": "Basic Indian Sign Language (ISL) Conversational Phrases",
+      "alt_text": "Instructor demonstrating standard Indian Sign Language handshapes and expressions for Namaste, Thank You, and How are you.",
+      "caption": "Learn fundamental ISL greetings and finger signs developed by ISLRTC.",
+      "transcript": "Transcript: Instructor signs greeting: Namaste (hands joined), Aap kaise hain (pointing and open gesture), Shukriya (palm moving forward with slight bow).",
+      "source_credit": "ISLRTC Government of India"
+    }
+  ],
+  "mobility-physical": [
+    {
+      "id": "med-mob-1",
+      "category_id": "cat-mobility",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/94r_Y8b7E6k",
+      "title": "Assistive Gaming and Adaptive Controllers in Action",
+      "alt_text": "User playing a video game using the Xbox Adaptive Controller connected to large button switches and foot pedals.",
+      "caption": "Adaptive switch interfaces allow custom mapping for different motor capabilities.",
+      "transcript": "Transcript: The video demonstrates connecting large external arcade buttons, sip-and-puff straws, and foot switches to control digital interfaces without fine hand grasping.",
+      "source_credit": "Microsoft Inclusive Tech Lab"
+    }
+  ],
+  "speech-language": [
+    {
+      "id": "med-speech-1",
+      "category_id": "cat-speech",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/gZ9cZ4nS8nI",
+      "title": "How AAC Communication Devices Work in Everyday Life",
+      "alt_text": "Non-verbal communicator selecting words and pictograms on an AAC speech generating tablet to hold fluent conversations.",
+      "caption": "Augmentative and Alternative Communication (AAC) gives a natural voice to non-speaking children and adults.",
+      "transcript": "Transcript: The presenter demonstrates selecting core vocabulary words on an AAC grid, generating synthesized speech, and conversing seamlessly with peers in educational and social settings.",
+      "source_credit": "Communication Matters / AssistiveWare"
+    }
+  ],
+  "learning-disabilities": [
+    {
+      "id": "med-learn-1",
+      "category_id": "cat-learning",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/zafiGBrFkRM",
+      "title": "What is Dyslexia and How Assistive Technology Empowers Readers?",
+      "alt_text": "Educational animation illustrating how phonological processing differences affect reading, and how text-to-speech tools bridge the gap.",
+      "caption": "Dyslexia is a neurobiological difference; assistive readers and audiobooks enable students to excel academically.",
+      "transcript": "Transcript: Kelli Sandman-Hurley explains the neurobiology of dyslexia, debunking letter-reversal myths and highlighting the vital role of multisensory structured language tools.",
+      "source_credit": "TED-Ed"
+    }
+  ],
+  "adhd": [
+    {
+      "id": "med-adhd-1",
+      "category_id": "cat-adhd",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/jhcn1_qsYmg",
+      "title": "How ADHD Affects Executive Function and Focus in Daily Life",
+      "alt_text": "Visual guide illustrating executive dysfunction, working memory challenges, and the power of clutter-free focus tools.",
+      "caption": "Understanding dopamine regulation in ADHD helps design calm, distraction-free digital environments.",
+      "transcript": "Transcript: Jessica McCabe illustrates how executive functions act like the conductor of a brain orchestra, and how external visual timers and structured checklists restore control.",
+      "source_credit": "How to ADHD"
+    }
+  ],
+  "autism-spectrum": [
+    {
+      "id": "med-autism-1",
+      "category_id": "cat-autism",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/aPknwW8m6Po",
+      "title": "Can You Make It To The End? Autism Sensory Overload Experience",
+      "alt_text": "First-person sensory perspective inside a crowded shopping mall illustrating visual glare, loud overlapping noises, and cognitive overwhelm.",
+      "caption": "Experiencing how sensory sensitivities can lead to overload highlights the critical need for calm sensory spaces.",
+      "transcript": "Transcript: First-person visual journey showing overwhelming fluorescent light flickers, loud escalator rumblings, and sensory input accumulation that triggers autistic shutdown.",
+      "source_credit": "National Autistic Society UK"
+    }
+  ],
+  "mental-health": [
+    {
+      "id": "med-mental-1",
+      "category_id": "cat-mental-health",
+      "type": "video",
+      "url": "https://www.youtube-nocookie.com/embed/1vph8_KZZoM",
+      "title": "The 5-4-3-2-1 Coping Technique for Anxiety and Panic Attacks",
+      "alt_text": "Mental health clinician explaining the physiological basis of panic and demonstrating the 5-4-3-2-1 sensory grounding technique.",
+      "caption": "Sensory grounding engages physical perception to down-regulate the nervous system during acute anxiety.",
+      "transcript": "Transcript: Clinician guides viewers through identifying 5 things they can see, 4 they can touch, 3 they can hear, 2 they can smell, and 1 they can taste, grounding attention away from catastrophic thoughts.",
+      "source_credit": "Therapy in a Nutshell / NIMHANS Clinical Resources"
+    }
+  ]
+};
+
+export const staticCategoryQuizzes = {
+  "visual-impairment": [
+    {
+      "id": "qz-v-1",
+      "category_id": "cat-visual",
+      "question": "What percentage of people with visual impairment or legal blindness retain some functional sight?",
+      "options": [
+        "0% (All blind people see total darkness)",
+        "Around 25%",
+        "Around 85%",
+        "Only 5%"
+      ],
+      "explanation": "Approximately 85% of people diagnosed with visual impairment have residual vision such as light, shadow, or color perception."
+    },
+    {
+      "id": "qz-v-2",
+      "category_id": "cat-visual",
+      "question": "What is the minimum WCAG 2.2 AA contrast ratio required for normal body text against its background?",
+      "options": [
+        "2:1",
+        "3:1",
+        "4.5:1",
+        "7:1"
+      ],
+      "explanation": "WCAG 2.2 Level AA requires a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text."
+    },
+    {
+      "id": "qz-v-3",
+      "category_id": "cat-visual",
+      "question": "Which of the following is a popular, free, open-source screen reader for Windows?",
+      "options": [
+        "NVDA",
+        "Photoshop",
+        "ChromeVox Pro",
+        "WinScribe"
+      ],
+      "explanation": "NVDA (NonVisual Desktop Access) is a free, high-performance, open-source screen reader for Windows used globally."
+    },
+    {
+      "id": "qz-v-4",
+      "category_id": "cat-visual",
+      "question": "Which visual condition causes progressive loss of peripheral vision, often referred to as \"tunnel vision\"?",
+      "options": [
+        "Cataracts",
+        "Glaucoma",
+        "Macular Degeneration",
+        "Myopia"
+      ],
+      "explanation": "Glaucoma damages the optic nerve, frequently diminishing peripheral sight while central sight may initially remain."
+    },
+    {
+      "id": "qz-v-5",
+      "category_id": "cat-visual",
+      "question": "Under India's RPwD Act 2016, what is the employment reservation percentage in government jobs for persons with benchmark disabilities?",
+      "options": [
+        "1%",
+        "2%",
+        "4%",
+        "10%"
+      ],
+      "explanation": "The RPwD Act 2016 raised the reservation in government establishments from 3% to 4%, including specific quotas for visual and hearing disabilities."
+    },
+    {
+      "id": "qz-v-6",
+      "category_id": "cat-visual",
+      "question": "What is a refreshable Braille display?",
+      "options": [
+        "An electromechanical hardware device that raises and lowers rounded pins to produce dynamic tactile Braille from digital screen text",
+        "A chemical cleaning cloth for computer monitors",
+        "A digital magnifying lamp for reading printed paper books",
+        "A high-speed optical printer that produces embossed braille sheets only"
+      ],
+      "explanation": "Refreshable Braille displays translate on-screen digital text into tactile Braille cells in real time using movable electromechanical pins."
+    },
+    {
+      "id": "qz-v-7",
+      "category_id": "cat-visual",
+      "question": "Which type of color vision deficiency involves insensitivity or absence of green cone photoreceptors (most common form of red-green deficiency)?",
+      "options": [
+        "Protanopia",
+        "Deuteranopia",
+        "Tritanopia",
+        "Monochromacy"
+      ],
+      "explanation": "Deuteranopia (or deuteranomaly) affects green cone photoreceptors and represents the most prevalent hereditary color vision variation."
+    },
+    {
+      "id": "qz-v-8",
+      "category_id": "cat-visual",
+      "question": "In web accessibility (WCAG 1.1.1), why must informative <img> elements have accurate \"alt\" text attributes?",
+      "options": [
+        "To make graphics render faster over slow cellular networks",
+        "So screen readers can vocalize the content and purpose of the visual element to blind and low-vision users",
+        "To automatically convert images into downloadable vector PDF files",
+        "To change the border color of image thumbnails"
+      ],
+      "explanation": "Screen readers vocalize the alt attribute text to users who cannot see the graphic, conveying the same informational meaning as the visual image."
+    },
+    {
+      "id": "qz-v-9",
+      "category_id": "cat-visual",
+      "question": "On pedestrian pathways and railway platforms, what tactile ground indicator pattern signals a clear, continuous walking route for white cane users?",
+      "options": [
+        "Raised directional linear ridges / guiding bars",
+        "Raised blister hazard dots / warning studs",
+        "Smooth polished glazed granite tiles",
+        "Cross-hatched diamond grid indentations"
+      ],
+      "explanation": "Linear directional tactile bars guide cane users safely forward in a straight line, while blister warning bumps indicate hazards, turns, or curbs."
+    },
+    {
+      "id": "qz-v-10",
+      "category_id": "cat-visual",
+      "question": "What is the primary function of Orca in the Linux / GNOME computing ecosystem?",
+      "options": [
+        "A free, flexible, open-source screen reader and magnifier for graphical desktops",
+        "A database server optimizer for web servers",
+        "A video streaming encoder application",
+        "An automated braille embossing driver utility"
+      ],
+      "explanation": "Orca is the standard assistive technology providing speech synthesis and refreshable Braille navigation on Linux / GNOME desktops."
+    }
+  ],
+  "hearing-impairment": [
+    {
+      "id": "qz-h-1",
+      "category_id": "cat-hearing",
+      "question": "What is the official central institute for Indian Sign Language established by the Government of India?",
+      "options": [
+        "ISLRTC (New Delhi)",
+        "IIT Bombay",
+        "CSIR",
+        "AIIMS Audio Cell"
+      ],
+      "explanation": "The Indian Sign Language Research and Training Centre (ISLRTC) in New Delhi develops learning materials and standardizes the ISL dictionary."
+    },
+    {
+      "id": "qz-h-2",
+      "category_id": "cat-hearing",
+      "question": "In high-frequency sensorineural hearing loss, which components of speech are typically hardest to distinguish?",
+      "options": [
+        "Low vowel sounds (a, o, u)",
+        "High-pitched consonants (s, f, th, sh)",
+        "Loud musical bass",
+        "All sounds equally"
+      ],
+      "explanation": "Consonants like s, f, th, and sh carry high acoustic frequencies. Losing these frequencies makes speech sound muffled and indistinct."
+    },
+    {
+      "id": "qz-h-3",
+      "category_id": "cat-hearing",
+      "question": "What is the medical term for experiencing persistent ringing, clicking, or buzzing in the ears without an external sound?",
+      "options": [
+        "Presbycusis",
+        "Tinnitus",
+        "Aphasia",
+        "Dyslexia"
+      ],
+      "explanation": "Tinnitus is the perception of noise or ringing in the ears and affects millions of individuals with auditory conditions."
+    },
+    {
+      "id": "qz-h-4",
+      "category_id": "cat-hearing",
+      "question": "Which government scheme in India provides financial support for cochlear implant surgeries in young children from low-income families?",
+      "options": [
+        "ADIP Scheme",
+        "PM-KISAN",
+        "Swachh Bharat",
+        "Ayushman Bharat PMJAY Only"
+      ],
+      "explanation": "The ADIP (Assistance to Disabled Persons) scheme supports pediatric cochlear implants up to ₹6 Lakhs per beneficiary."
+    },
+    {
+      "id": "qz-h-5",
+      "category_id": "cat-hearing",
+      "question": "What component inside modern hearing aids allows them to directly receive audio from an induction hearing loop system in public venues?",
+      "options": [
+        "Telecoil (T-coil)",
+        "Infrared receiver diode",
+        "FM radio antenna only",
+        "Piezoelectric crystal"
+      ],
+      "explanation": "A Telecoil (T-coil) is a small magnetic coil that picks up audio signals directly from an induction loop system, filtering out ambient hall noise."
+    },
+    {
+      "id": "qz-h-6",
+      "category_id": "cat-hearing",
+      "question": "Under WCAG 2.2 AA (Criterion 1.2.2), what is mandated for all pre-recorded video media that contains speech?",
+      "options": [
+        "Accurate, synchronized closed captions including speaker IDs and sound effects",
+        "Subtitles translated into Latin script only",
+        "A high-volume background soundtrack",
+        "Automatic 2x video playback acceleration"
+      ],
+      "explanation": "Synchronized captions convey dialogue, identify active speakers, and transcribe critical sound effects (applause, alarms) for d/Deaf viewers."
+    },
+    {
+      "id": "qz-h-7",
+      "category_id": "cat-hearing",
+      "question": "In Indian Sign Language (ISL), what essential role do Non-Manual Markers (NMMs) like facial expressions and head tilts play?",
+      "options": [
+        "They serve purely as decorative emotional expressions",
+        "They form indispensable grammatical structures that distinguish question types, negation, and adverbs",
+        "They are only used during theatrical performances",
+        "They eliminate the need for manual hand shapes entirely"
+      ],
+      "explanation": "Non-manual markers such as eyebrow positions, head movements, and mouth morphemes serve syntactic roles indicating questions, conditions, and tone."
+    },
+    {
+      "id": "qz-h-8",
+      "category_id": "cat-hearing",
+      "question": "What is the defining distinction between Open Captions and Closed Captions on digital video platforms?",
+      "options": [
+        "Open captions are permanently embedded into the video frames and cannot be turned off, whereas closed captions can be toggled on/off by the viewer",
+        "Closed captions can only be decoded when wearing wired headphones",
+        "Open captions are restricted to displaying musical notes and lyrics only",
+        "There is no technical difference between them"
+      ],
+      "explanation": "Open captions are permanently burned into the video video stream, whereas closed captions exist as separate text tracks that viewers can enable or disable."
+    },
+    {
+      "id": "qz-h-9",
+      "category_id": "cat-hearing",
+      "question": "How do assistive environmental alert systems inform deaf residents of critical domestic events (doorbells, fire alarms, telephone calls)?",
+      "options": [
+        "Through high-intensity strobe flashes, vibrating bed-shakers, and mobile push notifications",
+        "Through ultra-high frequency acoustic megaphones",
+        "Through special air pressure whistles",
+        "By automatically disconnecting household electricity"
+      ],
+      "explanation": "Sensory alerting systems convert audible environmental alerts into vivid flashing strobe lights and tactile vibrating units."
+    },
+    {
+      "id": "qz-h-10",
+      "category_id": "cat-hearing",
+      "question": "In clinical audiology, hearing loss exceeding what decibel (dB) threshold is classified as \"Profound Hearing Loss\"?",
+      "options": [
+        "25 dB",
+        "40 dB",
+        "70 dB",
+        "91 dB or greater"
+      ],
+      "explanation": "Profound hearing loss begins at 91 dB or greater, where conversational speech is inaudible without advanced amplification or cochlear implants."
+    }
+  ],
+  "mobility-physical": [
+    {
+      "id": "qz-m-1",
+      "category_id": "cat-mobility",
+      "question": "What is the recommended minimum touch target size according to WCAG 2.2 AA to support users with hand tremors?",
+      "options": [
+        "16x16 pixels",
+        "24x24 pixels",
+        "44x44 pixels",
+        "80x80 pixels"
+      ],
+      "explanation": "A minimum target size of 44x44 CSS pixels ensures individuals with tremors or motor limitations can tap controls accurately."
+    },
+    {
+      "id": "qz-m-2",
+      "category_id": "cat-mobility",
+      "question": "What assistive technology allows an individual with high-level quadriplegia to control a wheelchair or computer through breath pressure?",
+      "options": [
+        "Sip-and-Puff system",
+        "Optic trackpad",
+        "Haptic vest",
+        "Voice synthesizer only"
+      ],
+      "explanation": "Sip-and-puff technology translates inhalations and exhalations of air into directional mouse moves and clicks."
+    },
+    {
+      "id": "qz-m-3",
+      "category_id": "cat-mobility",
+      "question": "What is the maximum standard ramp slope recommended for safe wheelchair accessibility in public buildings?",
+      "options": [
+        "1:1 (45 degrees)",
+        "1:4",
+        "1:12",
+        "1:30 only"
+      ],
+      "explanation": "A 1:12 slope ratio (1 unit of vertical rise for every 12 units of horizontal run) is the standard accessible gradient."
+    },
+    {
+      "id": "qz-m-4",
+      "category_id": "cat-mobility",
+      "question": "Which assistive technology enables individuals with severe physical paralysis to navigate software interfaces solely using their eye gaze?",
+      "options": [
+        "Eye-tracking infrared camera systems with dwell-click selection",
+        "Optical barcode scanners",
+        "Standard red laser pointers",
+        "Digital overhead projector lenses"
+      ],
+      "explanation": "Eye trackers use near-infrared light to detect corneal reflections and pupil movement, moving the cursor and triggering selections via timed dwell clicks."
+    },
+    {
+      "id": "qz-m-5",
+      "category_id": "cat-mobility",
+      "question": "Why is a hidden \"Skip to Main Content\" link placed at the very top of accessible web pages?",
+      "options": [
+        "To reduce cellular network data bandwidth consumption",
+        "To allow keyboard-only and switch users to bypass long, repetitive navigation bars and jump straight to primary content",
+        "To automatically close all opened background tabs in the browser",
+        "To convert web pages into printable PDF documents"
+      ],
+      "explanation": "Skip links spare keyboard and switch-access users from having to press Tab through dozens of navigation links on every page load."
+    },
+    {
+      "id": "qz-m-6",
+      "category_id": "cat-mobility",
+      "question": "Under CPWD India Accessibility Norms and international standards, what is the minimum clear opening width for accessible doorways?",
+      "options": [
+        "500 mm (0.5 meter)",
+        "650 mm",
+        "900 mm (approx 36 inches / 3 feet)",
+        "1600 mm"
+      ],
+      "explanation": "A clear door opening width of at least 900 mm (36 inches) allows standard manual and motorized wheelchairs to pass without obstruction."
+    },
+    {
+      "id": "qz-m-7",
+      "category_id": "cat-mobility",
+      "question": "Which operating system accessibility feature prevents involuntary repeated key-presses caused by muscle tremors or spasticity?",
+      "options": [
+        "Filter Keys (or Bounce Keys)",
+        "Sticky Keys",
+        "Caps Lock Guard",
+        "Turbo Scroll Lock"
+      ],
+      "explanation": "Filter Keys instructs the operating system to disregard rapid, brief, or repeated keystrokes caused by muscle tremors or spasms."
+    },
+    {
+      "id": "qz-m-8",
+      "category_id": "cat-mobility",
+      "question": "How does the \"Sticky Keys\" accessibility feature assist computer users with single-hand or mouth-stick operation?",
+      "options": [
+        "It physically fastens loose mechanical keycaps to the keyboard board",
+        "It locks modifier keys (Shift, Ctrl, Alt, Windows) in an active state so shortcut combos can be typed sequentially one key at a time",
+        "It doubles the system CPU clock rate automatically",
+        "It activates an inverted high-contrast screen magnifier"
+      ],
+      "explanation": "Sticky Keys eliminates the need to press multiple keys simultaneously (e.g. Ctrl+Alt+Del), allowing each modifier key to be tapped in sequence."
+    },
+    {
+      "id": "qz-m-9",
+      "category_id": "cat-mobility",
+      "question": "What is an assistive \"Switch Device\" (such as a jelly bean or buddy switch) commonly used for in assistive tech?",
+      "options": [
+        "A specialized sensitive push-button activated by a hand, chin, cheek, or foot to operate scanning software interfaces",
+        "A circuit breaker toggle in a building electrical panel",
+        "A network switch routing internet ethernet cables",
+        "A surge protector power strip toggle"
+      ],
+      "explanation": "Assistive switches provide simple binary input (press/release) for individuals with limited motor control to operate computers via single-switch scanning."
+    },
+    {
+      "id": "qz-m-10",
+      "category_id": "cat-mobility",
+      "question": "Under the Harmonised Guidelines for Universal Accessibility in India (2021), what circular turning diameter is required for a manual wheelchair?",
+      "options": [
+        "800 mm",
+        "1000 mm",
+        "1500 mm (1.5 meters)",
+        "2800 mm"
+      ],
+      "explanation": "A circular landing or turning area with a diameter of 1500 mm (1.5 m) allows a 360-degree turn of standard manual wheelchairs."
+    }
+  ],
+  "speech-language": [
+    {
+      "id": "qz-s-1",
+      "category_id": "cat-speech",
+      "question": "What does the abbreviation AAC stand for in the context of speech and language accommodations?",
+      "options": [
+        "Augmentative and Alternative Communication",
+        "Automated Audio Captioning",
+        "Auditory Aphasia Correction",
+        "Advanced Articulation Coding"
+      ],
+      "explanation": "AAC stands for Augmentative and Alternative Communication, encompassing picture boards, text-to-speech devices, and gestural systems."
+    },
+    {
+      "id": "qz-s-2",
+      "category_id": "cat-speech",
+      "question": "Which neurological condition typically caused by stroke or brain injury affects a person's ability to express and understand written and spoken language?",
+      "options": [
+        "Aphasia",
+        "Astigmatism",
+        "Alopecia",
+        "Arthritis"
+      ],
+      "explanation": "Aphasia is a language disorder resulting from damage to brain regions responsible for language expression and comprehension."
+    },
+    {
+      "id": "qz-s-3",
+      "category_id": "cat-speech",
+      "question": "When communicating with an individual who uses an AAC speech generating device or has a speech dysfluency, what is the best practice?",
+      "options": [
+        "Finish their sentences for them to speed up conversation",
+        "Give them ample time to formulate and express their message without interrupting",
+        "Speak loudly as if they have hearing loss",
+        "Ask only questions requiring a nod"
+      ],
+      "explanation": "Patience and allowing conversational partners sufficient time to select icons or type their message on an AAC system preserves dignity."
+    },
+    {
+      "id": "qz-s-4",
+      "category_id": "cat-speech",
+      "question": "What is the fundamental distinction between Unaided and Aided AAC communication systems?",
+      "options": [
+        "Unaided AAC relies strictly on the user’s body (facial expressions, gestures, manual signing), whereas Aided AAC uses external tools (boards, tablets, electronic speech devices)",
+        "Unaided AAC requires a certified medical prescription to practice",
+        "Aided AAC is only permitted for children under 10 years of age",
+        "There is no technical difference between the two systems"
+      ],
+      "explanation": "Unaided communication requires no external tools (body gestures, signs, vocal sounds), whereas aided communication utilizes physical boards or digital AAC devices."
+    },
+    {
+      "id": "qz-s-5",
+      "category_id": "cat-speech",
+      "question": "Which motor speech disorder involves difficulty in planning and sequencing the precise muscle movements necessary for speech production, despite normal muscle strength?",
+      "options": [
+        "Apraxia of Speech (CAS / AOS)",
+        "Spina Bifida",
+        "Cataract",
+        "Presbyopia"
+      ],
+      "explanation": "Apraxia of speech is a neurological motor-planning disorder where the brain struggles to coordinate lip, jaw, and tongue movements to produce intended sounds."
+    },
+    {
+      "id": "qz-s-6",
+      "category_id": "cat-speech",
+      "question": "What is Dysarthria?",
+      "options": [
+        "A motor speech disorder resulting from muscle weakness, paralysis, or discoordination that affects vocal articulation, breath control, and speech volume",
+        "A complete congenital loss of auditory perception",
+        "An inability to decipher numerical calculations",
+        "A social phobia of public lectures"
+      ],
+      "explanation": "Dysarthria occurs when neurological damage (stroke, cerebral palsy, ALS) weakens or paralyzes speech muscles, resulting in slurred or strained vocalization."
+    },
+    {
+      "id": "qz-s-7",
+      "category_id": "cat-speech",
+      "question": "Which of the following is a recognized open-source, web-based AAC communication tool featuring symbol boards and speech synthesis in Indian languages?",
+      "options": [
+        "Cboard",
+        "AutoCAD",
+        "Docker Compose",
+        "VLC Media Player"
+      ],
+      "explanation": "Cboard is an open-source progressive web application providing symbol boards and text-to-speech support in multiple Indian and international languages."
+    },
+    {
+      "id": "qz-s-8",
+      "category_id": "cat-speech",
+      "question": "In speech and language pathology, how does an Eye-Gaze AAC communication tablet assist non-verbal individuals with severe physical paralysis?",
+      "options": [
+        "It tracks ocular fixations with high-precision infrared sensors, allowing the user to select vocabulary tiles and speak sentences using their gaze",
+        "It requires the user to wear heavy magnifying spectacles while talking",
+        "It converts lip reading into closed captions without any display",
+        "It trains the user to avoid eye contact in social situations"
+      ],
+      "explanation": "Eye-gaze AAC devices empower non-verbal individuals with motor impairments (such as ALS or cerebral palsy) to produce synthetic speech solely by looking at display symbols."
+    },
+    {
+      "id": "qz-s-9",
+      "category_id": "cat-speech",
+      "question": "What is an Electrolarynx assistive speech device?",
+      "options": [
+        "A handheld battery-powered device held against the neck that generates acoustic vibrations that the speaker shapes into articulate words after vocal cord removal",
+        "An electronic stethoscope used by cardiologists",
+        "A studio condenser microphone used for vocal singing",
+        "An ultrasonic neck massage wand"
+      ],
+      "explanation": "Following surgical removal of the larynx (laryngectomy), an electrolarynx provides an external mechanical sound source vibrating through throat tissues."
+    },
+    {
+      "id": "qz-s-10",
+      "category_id": "cat-speech",
+      "question": "Why does accessible digital public service design require providing live chat or email contact options alongside telephone voice helplines?",
+      "options": [
+        "To guarantee that non-verbal citizens and individuals with speech disabilities can obtain services independently without vocalizing on the phone",
+        "To cut telecommunication carrier expenses for call centers",
+        "To substitute live support staff with automated spam bots",
+        "To eliminate the necessity of saving textual customer logs"
+      ],
+      "explanation": "Voice-only helplines erect insurmountable barriers for citizens with speech or hearing disabilities; accessible multimodal communication ensures universal access."
+    }
+  ],
+  "learning-disabilities": [
+    {
+      "id": "qz-l-1",
+      "category_id": "cat-learning",
+      "question": "Under the RPwD Act 2016 in India, Specific Learning Disabilities (SLD) legally encompass which conditions?",
+      "options": [
+        "Dyslexia, Dysgraphia, and Dyscalculia",
+        "Only complete color blindness",
+        "Peripheral hearing impairment",
+        "Temporary memory fatigue"
+      ],
+      "explanation": "The RPwD Act 2016 recognizes Specific Learning Disabilities (SLD), encompassing Dyslexia (reading), Dysgraphia (writing), and Dyscalculia (math)."
+    },
+    {
+      "id": "qz-l-2",
+      "category_id": "cat-learning",
+      "question": "How do specialized dyslexia-friendly typefaces (like OpenDyslexic or Lexend) assist readers with dyslexia?",
+      "options": [
+        "They invert colors every 5 seconds",
+        "They feature heavier, weighted bottoms on letterforms to reduce perceived flipping and rotations",
+        "They replace text with emoji icons",
+        "They increase font size to 100pt automatically"
+      ],
+      "explanation": "Dyslexia-friendly typefaces incorporate bottom-weighted letterforms and distinct shapes to prevent letters from appearing inverted."
+    },
+    {
+      "id": "qz-l-3",
+      "category_id": "cat-learning",
+      "question": "What digital assistive accommodation helps individuals with reading processing difficulties track one line of text at a time?",
+      "options": [
+        "Screen Magnifier with Inversion",
+        "Digital Reading Ruler / Guiding Overlay",
+        "Bass Audio Equalizer",
+        "Mouse Cursor Jitter Filter"
+      ],
+      "explanation": "Digital reading rulers highlight the active line of text while dimming surrounding paragraphs, reducing visual crowding."
+    },
+    {
+      "id": "qz-l-4",
+      "category_id": "cat-learning",
+      "question": "What is Dyscalculia?",
+      "options": [
+        "A specific learning disability affecting a person’s ability to understand numerical values, mathematical symbols, mental arithmetic, and time calculation",
+        "Difficulty recognizing familiar human facial expressions",
+        "A physical motor tremor affecting penmanship",
+        "A loss of peripheral color visual field"
+      ],
+      "explanation": "Dyscalculia is a neurodevelopmental learning difference involving persistent difficulty in understanding number relationships, arithmetic calculations, and clock time."
+    },
+    {
+      "id": "qz-l-5",
+      "category_id": "cat-learning",
+      "question": "What is Dysgraphia?",
+      "options": [
+        "A specific learning condition that impairs handwriting mechanics, pencil grip control, spelling accuracy, and spatial coherence of written text",
+        "A severe phobia of speaking into an audio microphone",
+        "An inability to perceive tonal pitch and musical melodies",
+        "A temporary optical migraine"
+      ],
+      "explanation": "Dysgraphia is a neurological learning condition affecting fine motor coordination and orthographic memory required for handwriting and organizing written thoughts."
+    },
+    {
+      "id": "qz-l-6",
+      "category_id": "cat-learning",
+      "question": "Which typographic layout formatting best supports comfortable reading for individuals with dyslexia and visual stress?",
+      "options": [
+        "Left-aligned text with generous line spacing (1.5x) and avoiding full justified alignment",
+        "Fully justified text blocks with dense kerning and cursive fonts",
+        "All-uppercase capitalized text rendered in tight italics",
+        "Centering all multi-paragraph reading passages"
+      ],
+      "explanation": "Fully justified text creates erratic inter-word gaps (\"rivers of white\") that impede visual tracking; left-aligned text ensures steady, predictable reading saccades."
+    },
+    {
+      "id": "qz-l-7",
+      "category_id": "cat-learning",
+      "question": "How does Text-to-Speech (TTS) bimodal presentation (synchronized dual-color highlighting) aid readers with learning difficulties?",
+      "options": [
+        "It synchronously highlights sentences and individual words as audio playback proceeds, strengthening visual-auditory phonological binding",
+        "It flashes bright neon warnings over grammatically complex words",
+        "It deletes unfamiliar multi-syllabic vocabulary words from the text",
+        "It rotates confusing letter glyphs upside down"
+      ],
+      "explanation": "Bimodal presentation pairs simultaneous auditory speech with synchronized visual text highlighting, significantly enhancing word recognition and comprehension."
+    },
+    {
+      "id": "qz-l-8",
+      "category_id": "cat-learning",
+      "question": "Under CBSE guidelines and RPwD Act regulations in India, what examination accommodations are granted to students with certified Specific Learning Disabilities?",
+      "options": [
+        "Compensatory extra time (20 minutes per hour) and the option of an adult scribe or reader",
+        "Automatic award of 100% maximum grade without examination participation",
+        "Total permanent exemption from attending educational classes",
+        "Permission to bring personal academic textbooks into the examination hall"
+      ],
+      "explanation": "National education boards grant certified SLD students compensatory extra time (20 minutes per hour of exam), scribes/readers, and exemption from third-language requirements."
+    },
+    {
+      "id": "qz-l-9",
+      "category_id": "cat-learning",
+      "question": "What is the purpose of an \"Easy Read\" (or Plain Language) document format?",
+      "options": [
+        "Presenting complex institutional and legal information through concise sentences, plain terminology, and supporting illustrative imagery",
+        "A code minification tool that removes whitespace from source code",
+        "An encrypted compression format for archival storage",
+        "A software compiler for legacy computer mainframes"
+      ],
+      "explanation": "Easy Read formats translate intricate policy, medical, and administrative documents into straightforward language paired with pictures to aid cognitive access."
+    },
+    {
+      "id": "qz-l-10",
+      "category_id": "cat-learning",
+      "question": "Which background color adjustment often helps individuals with visual stress (Meares-Irlen syndrome) read comfortably?",
+      "options": [
+        "Replacing stark glaring white backgrounds with warm off-white, cream, or pastel tint overlays",
+        "Using pure black text on pure reflective white",
+        "Flickering strobe backlights",
+        "Fluorescent green font on yellow background"
+      ],
+      "explanation": "Many individuals with visual stress experience glare or distortion on high-contrast white pages; soft pastel or sepia background overlays eliminate reading strain."
+    }
+  ],
+  "adhd": [
+    {
+      "id": "qz-a-1",
+      "category_id": "cat-adhd",
+      "question": "What are the primary executive functioning domains commonly affected in individuals with ADHD?",
+      "options": [
+        "Physical muscle strength and bone density",
+        "Working memory, impulse control, task initiation, and sustained attention",
+        "Optic nerve signal reception",
+        "High-frequency sound discrimination"
+      ],
+      "explanation": "ADHD is a neurodevelopmental condition involving executive dysfunction, affecting task initiation, working memory, and sustained attention."
+    },
+    {
+      "id": "qz-a-2",
+      "category_id": "cat-adhd",
+      "question": "Which web design and browser feature directly helps neurodivergent individuals and users with ADHD focus on content?",
+      "options": [
+        "Auto-playing background video ads",
+        "Distraction-free Reader View / Focus Mode that strips extraneous sidebars and popups",
+        "Flashing animated banners",
+        "Infinite continuous scroll without headings"
+      ],
+      "explanation": "Reader View and Focus Mode eliminate sidebar advertisements, animations, and non-essential visual clutter, significantly reducing cognitive load."
+    },
+    {
+      "id": "qz-a-3",
+      "category_id": "cat-adhd",
+      "question": "What is the productivity technique that breaks work into focused 25-minute intervals followed by short breaks, widely used by people with ADHD?",
+      "options": [
+        "The Pomodoro Technique",
+        "The Waterfall Method",
+        "The Boolean Search Loop",
+        "The Weber-Fechner Cycle"
+      ],
+      "explanation": "The Pomodoro Technique uses structured time-boxing (usually 25 minutes of focus followed by a 5-minute break) to maintain momentum."
+    },
+    {
+      "id": "qz-a-4",
+      "category_id": "cat-adhd",
+      "question": "What is \"Hyperfocus\" in the context of Attention Deficit Hyperactivity Disorder (ADHD)?",
+      "options": [
+        "A state of intense, deep absorption in a high-interest activity where external stimuli and the passage of time are completely tuned out",
+        "An optometric prescription for high-magnification reading glasses",
+        "The inability to sustain attention on anything for longer than two seconds",
+        "A neurosurgical procedure performed on the cerebral cortex"
+      ],
+      "explanation": "Hyperfocus is a recognized ADHD phenomenon where high stimulation or deep personal interest triggers intense, prolonged absorption in a single task."
+    },
+    {
+      "id": "qz-a-5",
+      "category_id": "cat-adhd",
+      "question": "What is \"Time Blindness\", commonly experienced by individuals with ADHD?",
+      "options": [
+        "A persistent difficulty in gauging, tracking, and sensing the passage of time or estimating task durations",
+        "An eye injury resulting from directly looking into bright solar eclipses",
+        "A malfunctioning electronic wrist watch mechanism",
+        "A medical condition where a person can only awaken after dusk"
+      ],
+      "explanation": "Time blindness stems from executive function differences, making it difficult to perceive the flow of time and plan future schedules reliably."
+    },
+    {
+      "id": "qz-a-6",
+      "category_id": "cat-adhd",
+      "question": "How do Visual Timers (such as the Time Timer) benefit neurodivergent individuals and people with ADHD?",
+      "options": [
+        "They represent remaining time as a diminishing colored disc, translating abstract numerical minutes into intuitive visual space",
+        "They sound piercing high-decibel acoustic sirens every single minute",
+        "They freeze digital desktop system clocks temporarily",
+        "They accelerate real-world time by a factor of 10"
+      ],
+      "explanation": "Visual timers convert abstract numerical clock figures into an intuitive decreasing slice of color, making the passage of time tangible and clear."
+    },
+    {
+      "id": "qz-a-7",
+      "category_id": "cat-adhd",
+      "question": "Which design pattern prevents cognitive fatigue and form abandonment for users with ADHD completing multi-step online forms?",
+      "options": [
+        "Segmenting forms into progressive step-by-step wizards with visible progress bars and auto-saving drafts",
+        "Presenting a single massive unsegmented page containing 150 compulsory fields",
+        "Hiding confirmation action buttons that change position upon every mouse hover",
+        "Imposing an unextendable 45-second session timer on each question"
+      ],
+      "explanation": "Progressive disclosure breaks lengthy procedures into manageable milestones, reducing cognitive load, working memory strain, and anxiety."
+    },
+    {
+      "id": "qz-a-8",
+      "category_id": "cat-adhd",
+      "question": "What is \"Body Doubling\" in ADHD support and productivity strategies?",
+      "options": [
+        "Working on tasks in the physical or virtual presence of another supportive individual to foster focus and gentle accountability",
+        "Hiring an identical twin actor to attend examination halls",
+        "Duplicating account credentials across social networking sites",
+        "Practicing dual-handed calligraphy simultaneously"
+      ],
+      "explanation": "Body doubling involves having another quiet, focused person present in the room or on video call, which helps reduce task paralysis and anchors attention."
+    },
+    {
+      "id": "qz-a-9",
+      "category_id": "cat-adhd",
+      "question": "Why are auto-playing background animations, looping GIFs, and animated marquees especially disruptive to users with ADHD?",
+      "options": [
+        "They trigger involuntary reflexive attention capture in the brain, continuously derailing focus from primary reading material",
+        "They cause immediate liquid crystal burnout in flat-panel monitors",
+        "They trigger mechanical failures in optical mouse peripherals",
+        "They physically overheat room temperature settings"
+      ],
+      "explanation": "Uncontrollable visual movement involuntarily stimulates the human orienting reflex, forcing the ADHD brain to repeatedly expend energy refocusing."
+    },
+    {
+      "id": "qz-a-10",
+      "category_id": "cat-adhd",
+      "question": "Under WCAG 2.2 Guideline 2.2.1 (Timing Adjustable), what accessibility accommodation must websites provide for time-limited activities?",
+      "options": [
+        "Advance warning before session expiry and a straightforward mechanism allowing the user to extend the time limit by at least 10 times",
+        "Immediate sudden logout without any warning alerts",
+        "Requiring the user to solve a complicated calculus equation before extending the session",
+        "Restricting all user sessions strictly to a maximum of 30 seconds"
+      ],
+      "explanation": "WCAG mandates that users who need more time due to cognitive or executive functioning differences must be warned and allowed to easily extend session timeouts."
+    }
+  ],
+  "autism-spectrum": [
+    {
+      "id": "qz-aut-1",
+      "category_id": "cat-autism",
+      "question": "What does the concept of \"Neurodiversity\" emphasize regarding autistic individuals?",
+      "options": [
+        "That neurological differences are natural variations of the human genome, not diseases to be cured",
+        "That all individuals must think and process information identically",
+        "That autism only affects children under 5 years old",
+        "That sensory overload is purely psychological"
+      ],
+      "explanation": "The Neurodiversity movement views neurological differences as valuable natural variations of human cognition deserving respect and accommodation."
+    },
+    {
+      "id": "qz-aut-2",
+      "category_id": "cat-autism",
+      "question": "Why are sudden strobe lights, loud unpredictable noises, and crowded digital banners challenging for many autistic individuals?",
+      "options": [
+        "Due to sensory processing differences where the nervous system experiences intense sensory overload",
+        "Because they cause immediate physical loss of motor reflexes",
+        "Because autistic individuals lack visual acuity",
+        "Because of low blood sugar levels"
+      ],
+      "explanation": "Autistic individuals often process sensory inputs with high sensitivity; intense lights or sounds can overwhelm sensory processing and trigger sensory overload."
+    },
+    {
+      "id": "qz-aut-3",
+      "category_id": "cat-autism",
+      "question": "Which communication accommodation supports autistic students and employees in navigating daily transitions and tasks?",
+      "options": [
+        "Unannounced last-minute schedule overhauls",
+        "Clear visual schedules, predictable routines, and explicit written expectations",
+        "Only communicating through metaphorical riddles",
+        "Exclusively rapid verbal directives"
+      ],
+      "explanation": "Visual schedules, clear advance notices of transitions, and concrete written communications provide predictability and reduce anxiety."
+    },
+    {
+      "id": "qz-aut-4",
+      "category_id": "cat-autism",
+      "question": "What is \"Stimming\" (self-stimulatory behavior) in autism?",
+      "options": [
+        "Repetitive physical movements or vocalizations (such as hand-flapping, rocking, or humming) used to self-regulate, calm emotions, or process sensory stimuli",
+        "An esports video game competition tactic",
+        "An aggressive interpersonal conversational debate technique",
+        "A surgical intervention performed on the throat"
+      ],
+      "explanation": "Stimming is a natural self-soothing and regulatory mechanism that assists autistic individuals in managing stress, processing sensory input, and expressing emotion."
+    },
+    {
+      "id": "qz-aut-5",
+      "category_id": "cat-autism",
+      "question": "What is the role of a \"Sensory Room\" or low-stimulation quiet space in inclusive schools and modern workplaces?",
+      "options": [
+        "A calm space equipped with dimmable lighting, noise dampening, and comfortable tactile seating for sensory decompression and recharge",
+        "A sound recording studio with high-intensity audio monitors",
+        "A corporate interrogation chamber",
+        "An unventilated server equipment storage room"
+      ],
+      "explanation": "Sensory rooms provide a soothing sanctuary with subdued lighting and muted acoustics where autistic individuals can decompress from sensory overwhelm."
+    },
+    {
+      "id": "qz-aut-6",
+      "category_id": "cat-autism",
+      "question": "What does the acronym PECS stand for in autism communication intervention?",
+      "options": [
+        "Picture Exchange Communication System",
+        "Personal Electronic Computer Station",
+        "Public Emergency Care Scheme",
+        "Pediatric Ear Checking Standard"
+      ],
+      "explanation": "PECS (Picture Exchange Communication System) is an evidence-based visual communication protocol enabling non-verbal individuals to initiate communication via picture cards."
+    },
+    {
+      "id": "qz-aut-7",
+      "category_id": "cat-autism",
+      "question": "Why is avoiding idioms, sarcasm, and ambiguous metaphors recommended when writing instructional guides and software copy?",
+      "options": [
+        "Many neurodivergent and autistic users interpret phrasing literally, making idioms confusing or misleading",
+        "Idioms increase software file sizes tenfold",
+        "Metaphors violate international copyright treaties",
+        "Figurative language creates font rendering glitches"
+      ],
+      "explanation": "Direct, transparent language avoids communicative misinterpretations for individuals who process language literally and appreciate explicit instructions."
+    },
+    {
+      "id": "qz-aut-8",
+      "category_id": "cat-autism",
+      "question": "What is \"Autistic Burnout\"?",
+      "options": [
+        "A state of severe chronic physical and cognitive exhaustion resulting from the cumulative toll of navigating unaccommodated environments and masking autistic traits",
+        "A physical thermal burn from computer hardware",
+        "Temporary muscle soreness following athletic jogging",
+        "A brief, momentary behavioral tantrum"
+      ],
+      "explanation": "Autistic burnout is a debilitating, long-term state of exhaustion, executive functioning decline, and sensory hypersensitivity caused by chronic environmental strain."
+    },
+    {
+      "id": "qz-aut-9",
+      "category_id": "cat-autism",
+      "question": "How do Active Noise-Cancelling (ANC) headphones assist autistic individuals in transit stations, malls, or open-plan offices?",
+      "options": [
+        "They attenuate chaotic background frequencies, preventing sensory overload and nervous system hyperarousal",
+        "They transmit secret private radio communications",
+        "They amplify all ambient speech by 200 decibels",
+        "They replace interpersonal visual contact with sound effects"
+      ],
+      "explanation": "ANC technology neutralizes low-frequency continuous ambient rumble and sharp background noise spikes, keeping sensory inputs within tolerable limits."
+    },
+    {
+      "id": "qz-aut-10",
+      "category_id": "cat-autism",
+      "question": "In India, which statutory body under the Ministry of Social Justice and Empowerment provides guardianship and welfare schemes for Autism Spectrum Disorder?",
+      "options": [
+        "The National Trust (for Welfare of Persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities)",
+        "Securities and Exchange Board of India (SEBI)",
+        "The Medical Council of India",
+        "Indian Space Research Organisation (ISRO)"
+      ],
+      "explanation": "The National Trust Act 1999 created this statutory body to deliver empowerment, support schemes (like Niramaya health insurance), and legal guardianship."
+    }
+  ],
+  "mental-health": [
+    {
+      "id": "qz-mh-1",
+      "category_id": "cat-mental-health",
+      "question": "What is the official toll-free national 24/7 mental health rehabilitation helpline in India launched by DEPwD, Government of India?",
+      "options": [
+        "KIRAN (1800-599-0019)",
+        "UDID Line (1900-111-2222)",
+        "ADIP Assist (100)",
+        "Samarthya Web (1098)"
+      ],
+      "explanation": "KIRAN (1800-599-0019) is a dedicated 24x7 toll-free helpline providing early screening, psychological first-aid, and distress management across 13 languages."
+    },
+    {
+      "id": "qz-mh-2",
+      "category_id": "cat-mental-health",
+      "question": "Under India's Rights of Persons with Disabilities (RPwD) Act 2016, how is Mental Illness recognized?",
+      "options": [
+        "It is not recognized legally",
+        "As one of the 21 legally recognized benchmark disability categories with legal protection against discrimination",
+        "Only if diagnosed prior to age 10",
+        "Solely as a temporary medical condition"
+      ],
+      "explanation": "The RPwD Act 2016 explicitly includes Mental Illness among its 21 recognized disabilities, entitling individuals to non-discrimination and safeguards."
+    },
+    {
+      "id": "qz-mh-3",
+      "category_id": "cat-mental-health",
+      "question": "Which digital accessibility principle particularly benefits users experiencing high anxiety, panic, or cognitive fatigue?",
+      "options": [
+        "Strict countdown timers with immediate account logout",
+        "Clear undo options, auto-saving forms, and predictable navigation without aggressive timeouts",
+        "Uncloseable modal alert sirens",
+        "Randomly rearranging button positions"
+      ],
+      "explanation": "WCAG 2.2 guidelines on Error Prevention and Timing Adjustable ensure users under stress can review inputs, recover from mistakes, and request more time."
+    },
+    {
+      "id": "qz-mh-4",
+      "category_id": "cat-mental-health",
+      "question": "What is the Tele-MANAS initiative launched by the Ministry of Health and Family Welfare (MoHFW), Government of India?",
+      "options": [
+        "A 24x7 comprehensive nationwide tele-mental health service accessible via toll-free number 14416 across all Indian States and UTs in regional languages",
+        "A satellite meteorology forecasting system",
+        "An online passport renewal appointment scheduler",
+        "A hospital administrative accounting software"
+      ],
+      "explanation": "Tele-MANAS provides free, round-the-clock tele-counselling, psychiatric consultation, and crisis intervention nationwide in over 20 languages via 14416."
+    },
+    {
+      "id": "qz-mh-5",
+      "category_id": "cat-mental-health",
+      "question": "Under India's Mental Healthcare Act 2017, which transformative human-rights provision was legally enacted?",
+      "options": [
+        "Decriminalization of suicide attempts and the legal right to create an Advance Directive detailing medical treatment choices",
+        "Mandatory detention without patient consent or judicial oversight",
+        "Immediate revocation of civil voting rights upon psychiatric diagnosis",
+        "Strict prohibition of confidential psychotherapy sessions"
+      ],
+      "explanation": "The Mental Healthcare Act 2017 protects patient autonomy, enshrines the right to Advance Directives, and decriminalized attempted suicide under Section 115."
+    },
+    {
+      "id": "qz-mh-6",
+      "category_id": "cat-mental-health",
+      "question": "Why is offering dark and low-contrast color themes essential for users with acute anxiety, sensory sensitivity, or migraines?",
+      "options": [
+        "It suppresses high-luminance monitor glare and harsh contrast spikes, creating a calm, low-glare reading environment",
+        "It makes website text completely invisible to save battery life",
+        "It accelerates internet browsing speeds by 50%",
+        "It protects the operating system against malware infection"
+      ],
+      "explanation": "Blinding white backgrounds can provoke photophobia, sensory strain, and heighten anxiety; gentle dark or warm palettes reduce visual excitation."
+    },
+    {
+      "id": "qz-mh-7",
+      "category_id": "cat-mental-health",
+      "question": "How does cognitive grounding (such as the 5-4-3-2-1 technique) help an individual during a panic attack or acute anxiety flare-up?",
+      "options": [
+        "It engages all five physical senses to reorient attention to immediate physical reality, interrupting catastrophic panic loops",
+        "It requires memorizing mathematical multiplication tables backwards",
+        "It induces an instantaneous hypnotic trance within 5 seconds",
+        "It measures physical reflex sprint speeds"
+      ],
+      "explanation": "The 5-4-3-2-1 grounding exercise engages sight, touch, sound, smell, and taste to ground consciousness in the present and deactivate autonomic panic surges."
+    },
+    {
+      "id": "qz-mh-8",
+      "category_id": "cat-mental-health",
+      "question": "Under WCAG 2.2 Success Criterion 3.3.4 (Error Prevention), what safeguards are required for digital legal, financial, or user data operations?",
+      "options": [
+        "Providing clear confirmation checkpoints, summary review steps, and reversible \"Undo\" mechanisms before finalized submission",
+        "Eliminating all confirmation prompts so transactions execute immediately upon single click",
+        "Displaying flashing red warning alerts with loud siren sounds",
+        "Automatically wiping all form input fields after 15 seconds"
+      ],
+      "explanation": "Requiring review before submission and permitting undo mechanisms eliminates panic and catastrophic mistakes for users under cognitive strain."
+    },
+    {
+      "id": "qz-mh-9",
+      "category_id": "cat-mental-health",
+      "question": "What is the function of an Emergency Crisis / Assistance Card carried by individuals with mental health or psychiatric conditions?",
+      "options": [
+        "To provide first responders and bystanders with instant, trusted emergency contacts, prescribed medications, and calm de-escalation guidelines",
+        "To serve as a retail supermarket discount voucher",
+        "To replace official state motor vehicle driver licenses",
+        "To prove fitness gym membership status"
+      ],
+      "explanation": "An Emergency Crisis Card communicates crucial medical facts, chosen emergency contacts, and personalized de-escalation instructions when a person is unable to speak."
+    },
+    {
+      "id": "qz-mh-10",
+      "category_id": "cat-mental-health",
+      "question": "What does \"Reasonable Accommodation\" encompass for employees with mental health conditions under the RPwD Act 2016?",
+      "options": [
+        "Tailored workplace modifications (such as flexible working hours, quiet workspaces, and break allowances) that enable equal participation without undue hardship",
+        "Mandating immediate termination of employment contracts",
+        "Doubling weekly work quotas without financial compensation",
+        "Prohibiting communication with work colleagues"
+      ],
+      "explanation": "Reasonable accommodation requires employers to furnish flexible, pragmatic workplace adaptations (e.g. quiet zones, modified schedules) to foster productive inclusion."
+    }
+  ]
+};

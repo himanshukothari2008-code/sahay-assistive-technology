@@ -975,6 +975,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-1",
       "category_id": "cat-visual",
+      "correct_index": 2,
       "question": "What percentage of people with visual impairment or legal blindness retain some functional sight?",
       "options": [
         "0% (All blind people see total darkness)",
@@ -987,6 +988,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-2",
       "category_id": "cat-visual",
+      "correct_index": 2,
       "question": "What is the minimum WCAG 2.2 AA contrast ratio required for normal body text against its background?",
       "options": [
         "2:1",
@@ -999,6 +1001,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-3",
       "category_id": "cat-visual",
+      "correct_index": 0,
       "question": "Which of the following is a popular, free, open-source screen reader for Windows?",
       "options": [
         "NVDA",
@@ -1011,6 +1014,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-4",
       "category_id": "cat-visual",
+      "correct_index": 1,
       "question": "Which visual condition causes progressive loss of peripheral vision, often referred to as \"tunnel vision\"?",
       "options": [
         "Cataracts",
@@ -1023,6 +1027,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-5",
       "category_id": "cat-visual",
+      "correct_index": 2,
       "question": "Under India's RPwD Act 2016, what is the employment reservation percentage in government jobs for persons with benchmark disabilities?",
       "options": [
         "1%",
@@ -1035,6 +1040,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-6",
       "category_id": "cat-visual",
+      "correct_index": 0,
       "question": "What is a refreshable Braille display?",
       "options": [
         "An electromechanical hardware device that raises and lowers rounded pins to produce dynamic tactile Braille from digital screen text",
@@ -1047,6 +1053,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-7",
       "category_id": "cat-visual",
+      "correct_index": 1,
       "question": "Which type of color vision deficiency involves insensitivity or absence of green cone photoreceptors (most common form of red-green deficiency)?",
       "options": [
         "Protanopia",
@@ -1059,6 +1066,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-8",
       "category_id": "cat-visual",
+      "correct_index": 1,
       "question": "In web accessibility (WCAG 1.1.1), why must informative <img> elements have accurate \"alt\" text attributes?",
       "options": [
         "To make graphics render faster over slow cellular networks",
@@ -1071,6 +1079,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-9",
       "category_id": "cat-visual",
+      "correct_index": 0,
       "question": "On pedestrian pathways and railway platforms, what tactile ground indicator pattern signals a clear, continuous walking route for white cane users?",
       "options": [
         "Raised directional linear ridges / guiding bars",
@@ -1083,6 +1092,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-v-10",
       "category_id": "cat-visual",
+      "correct_index": 0,
       "question": "What is the primary function of Orca in the Linux / GNOME computing ecosystem?",
       "options": [
         "A free, flexible, open-source screen reader and magnifier for graphical desktops",
@@ -1097,6 +1107,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-1",
       "category_id": "cat-hearing",
+      "correct_index": 0,
       "question": "What is the official central institute for Indian Sign Language established by the Government of India?",
       "options": [
         "ISLRTC (New Delhi)",
@@ -1109,6 +1120,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-2",
       "category_id": "cat-hearing",
+      "correct_index": 1,
       "question": "In high-frequency sensorineural hearing loss, which components of speech are typically hardest to distinguish?",
       "options": [
         "Low vowel sounds (a, o, u)",
@@ -1121,6 +1133,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-3",
       "category_id": "cat-hearing",
+      "correct_index": 1,
       "question": "What is the medical term for experiencing persistent ringing, clicking, or buzzing in the ears without an external sound?",
       "options": [
         "Presbycusis",
@@ -1133,6 +1146,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-4",
       "category_id": "cat-hearing",
+      "correct_index": 0,
       "question": "Which government scheme in India provides financial support for cochlear implant surgeries in young children from low-income families?",
       "options": [
         "ADIP Scheme",
@@ -1145,6 +1159,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-5",
       "category_id": "cat-hearing",
+      "correct_index": 0,
       "question": "What component inside modern hearing aids allows them to directly receive audio from an induction hearing loop system in public venues?",
       "options": [
         "Telecoil (T-coil)",
@@ -1157,6 +1172,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-6",
       "category_id": "cat-hearing",
+      "correct_index": 0,
       "question": "Under WCAG 2.2 AA (Criterion 1.2.2), what is mandated for all pre-recorded video media that contains speech?",
       "options": [
         "Accurate, synchronized closed captions including speaker IDs and sound effects",
@@ -1169,6 +1185,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-7",
       "category_id": "cat-hearing",
+      "correct_index": 1,
       "question": "In Indian Sign Language (ISL), what essential role do Non-Manual Markers (NMMs) like facial expressions and head tilts play?",
       "options": [
         "They serve purely as decorative emotional expressions",
@@ -1181,6 +1198,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-8",
       "category_id": "cat-hearing",
+      "correct_index": 0,
       "question": "What is the defining distinction between Open Captions and Closed Captions on digital video platforms?",
       "options": [
         "Open captions are permanently embedded into the video frames and cannot be turned off, whereas closed captions can be toggled on/off by the viewer",
@@ -1193,6 +1211,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-9",
       "category_id": "cat-hearing",
+      "correct_index": 0,
       "question": "How do assistive environmental alert systems inform deaf residents of critical domestic events (doorbells, fire alarms, telephone calls)?",
       "options": [
         "Through high-intensity strobe flashes, vibrating bed-shakers, and mobile push notifications",
@@ -1205,6 +1224,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-h-10",
       "category_id": "cat-hearing",
+      "correct_index": 3,
       "question": "In clinical audiology, hearing loss exceeding what decibel (dB) threshold is classified as \"Profound Hearing Loss\"?",
       "options": [
         "25 dB",
@@ -1219,6 +1239,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-1",
       "category_id": "cat-mobility",
+      "correct_index": 2,
       "question": "What is the recommended minimum touch target size according to WCAG 2.2 AA to support users with hand tremors?",
       "options": [
         "16x16 pixels",
@@ -1231,6 +1252,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-2",
       "category_id": "cat-mobility",
+      "correct_index": 0,
       "question": "What assistive technology allows an individual with high-level quadriplegia to control a wheelchair or computer through breath pressure?",
       "options": [
         "Sip-and-Puff system",
@@ -1243,6 +1265,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-3",
       "category_id": "cat-mobility",
+      "correct_index": 2,
       "question": "What is the maximum standard ramp slope recommended for safe wheelchair accessibility in public buildings?",
       "options": [
         "1:1 (45 degrees)",
@@ -1255,6 +1278,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-4",
       "category_id": "cat-mobility",
+      "correct_index": 0,
       "question": "Which assistive technology enables individuals with severe physical paralysis to navigate software interfaces solely using their eye gaze?",
       "options": [
         "Eye-tracking infrared camera systems with dwell-click selection",
@@ -1267,6 +1291,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-5",
       "category_id": "cat-mobility",
+      "correct_index": 1,
       "question": "Why is a hidden \"Skip to Main Content\" link placed at the very top of accessible web pages?",
       "options": [
         "To reduce cellular network data bandwidth consumption",
@@ -1279,6 +1304,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-6",
       "category_id": "cat-mobility",
+      "correct_index": 2,
       "question": "Under CPWD India Accessibility Norms and international standards, what is the minimum clear opening width for accessible doorways?",
       "options": [
         "500 mm (0.5 meter)",
@@ -1291,6 +1317,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-7",
       "category_id": "cat-mobility",
+      "correct_index": 0,
       "question": "Which operating system accessibility feature prevents involuntary repeated key-presses caused by muscle tremors or spasticity?",
       "options": [
         "Filter Keys (or Bounce Keys)",
@@ -1303,6 +1330,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-8",
       "category_id": "cat-mobility",
+      "correct_index": 1,
       "question": "How does the \"Sticky Keys\" accessibility feature assist computer users with single-hand or mouth-stick operation?",
       "options": [
         "It physically fastens loose mechanical keycaps to the keyboard board",
@@ -1315,6 +1343,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-9",
       "category_id": "cat-mobility",
+      "correct_index": 0,
       "question": "What is an assistive \"Switch Device\" (such as a jelly bean or buddy switch) commonly used for in assistive tech?",
       "options": [
         "A specialized sensitive push-button activated by a hand, chin, cheek, or foot to operate scanning software interfaces",
@@ -1327,6 +1356,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-m-10",
       "category_id": "cat-mobility",
+      "correct_index": 2,
       "question": "Under the Harmonised Guidelines for Universal Accessibility in India (2021), what circular turning diameter is required for a manual wheelchair?",
       "options": [
         "800 mm",
@@ -1341,6 +1371,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-1",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "What does the abbreviation AAC stand for in the context of speech and language accommodations?",
       "options": [
         "Augmentative and Alternative Communication",
@@ -1353,6 +1384,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-2",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "Which neurological condition typically caused by stroke or brain injury affects a person's ability to express and understand written and spoken language?",
       "options": [
         "Aphasia",
@@ -1365,6 +1397,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-3",
       "category_id": "cat-speech",
+      "correct_index": 1,
       "question": "When communicating with an individual who uses an AAC speech generating device or has a speech dysfluency, what is the best practice?",
       "options": [
         "Finish their sentences for them to speed up conversation",
@@ -1377,6 +1410,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-4",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "What is the fundamental distinction between Unaided and Aided AAC communication systems?",
       "options": [
         "Unaided AAC relies strictly on the user’s body (facial expressions, gestures, manual signing), whereas Aided AAC uses external tools (boards, tablets, electronic speech devices)",
@@ -1389,6 +1423,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-5",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "Which motor speech disorder involves difficulty in planning and sequencing the precise muscle movements necessary for speech production, despite normal muscle strength?",
       "options": [
         "Apraxia of Speech (CAS / AOS)",
@@ -1401,6 +1436,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-6",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "What is Dysarthria?",
       "options": [
         "A motor speech disorder resulting from muscle weakness, paralysis, or discoordination that affects vocal articulation, breath control, and speech volume",
@@ -1413,6 +1449,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-7",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "Which of the following is a recognized open-source, web-based AAC communication tool featuring symbol boards and speech synthesis in Indian languages?",
       "options": [
         "Cboard",
@@ -1425,6 +1462,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-8",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "In speech and language pathology, how does an Eye-Gaze AAC communication tablet assist non-verbal individuals with severe physical paralysis?",
       "options": [
         "It tracks ocular fixations with high-precision infrared sensors, allowing the user to select vocabulary tiles and speak sentences using their gaze",
@@ -1437,6 +1475,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-9",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "What is an Electrolarynx assistive speech device?",
       "options": [
         "A handheld battery-powered device held against the neck that generates acoustic vibrations that the speaker shapes into articulate words after vocal cord removal",
@@ -1449,6 +1488,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-s-10",
       "category_id": "cat-speech",
+      "correct_index": 0,
       "question": "Why does accessible digital public service design require providing live chat or email contact options alongside telephone voice helplines?",
       "options": [
         "To guarantee that non-verbal citizens and individuals with speech disabilities can obtain services independently without vocalizing on the phone",
@@ -1463,6 +1503,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-1",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "Under the RPwD Act 2016 in India, Specific Learning Disabilities (SLD) legally encompass which conditions?",
       "options": [
         "Dyslexia, Dysgraphia, and Dyscalculia",
@@ -1475,6 +1516,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-2",
       "category_id": "cat-learning",
+      "correct_index": 1,
       "question": "How do specialized dyslexia-friendly typefaces (like OpenDyslexic or Lexend) assist readers with dyslexia?",
       "options": [
         "They invert colors every 5 seconds",
@@ -1487,6 +1529,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-3",
       "category_id": "cat-learning",
+      "correct_index": 1,
       "question": "What digital assistive accommodation helps individuals with reading processing difficulties track one line of text at a time?",
       "options": [
         "Screen Magnifier with Inversion",
@@ -1499,6 +1542,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-4",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "What is Dyscalculia?",
       "options": [
         "A specific learning disability affecting a person’s ability to understand numerical values, mathematical symbols, mental arithmetic, and time calculation",
@@ -1511,6 +1555,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-5",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "What is Dysgraphia?",
       "options": [
         "A specific learning condition that impairs handwriting mechanics, pencil grip control, spelling accuracy, and spatial coherence of written text",
@@ -1523,6 +1568,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-6",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "Which typographic layout formatting best supports comfortable reading for individuals with dyslexia and visual stress?",
       "options": [
         "Left-aligned text with generous line spacing (1.5x) and avoiding full justified alignment",
@@ -1535,6 +1581,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-7",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "How does Text-to-Speech (TTS) bimodal presentation (synchronized dual-color highlighting) aid readers with learning difficulties?",
       "options": [
         "It synchronously highlights sentences and individual words as audio playback proceeds, strengthening visual-auditory phonological binding",
@@ -1547,6 +1594,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-8",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "Under CBSE guidelines and RPwD Act regulations in India, what examination accommodations are granted to students with certified Specific Learning Disabilities?",
       "options": [
         "Compensatory extra time (20 minutes per hour) and the option of an adult scribe or reader",
@@ -1559,6 +1607,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-9",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "What is the purpose of an \"Easy Read\" (or Plain Language) document format?",
       "options": [
         "Presenting complex institutional and legal information through concise sentences, plain terminology, and supporting illustrative imagery",
@@ -1571,6 +1620,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-l-10",
       "category_id": "cat-learning",
+      "correct_index": 0,
       "question": "Which background color adjustment often helps individuals with visual stress (Meares-Irlen syndrome) read comfortably?",
       "options": [
         "Replacing stark glaring white backgrounds with warm off-white, cream, or pastel tint overlays",
@@ -1585,6 +1635,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-1",
       "category_id": "cat-adhd",
+      "correct_index": 1,
       "question": "What are the primary executive functioning domains commonly affected in individuals with ADHD?",
       "options": [
         "Physical muscle strength and bone density",
@@ -1597,6 +1648,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-2",
       "category_id": "cat-adhd",
+      "correct_index": 1,
       "question": "Which web design and browser feature directly helps neurodivergent individuals and users with ADHD focus on content?",
       "options": [
         "Auto-playing background video ads",
@@ -1609,6 +1661,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-3",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "What is the productivity technique that breaks work into focused 25-minute intervals followed by short breaks, widely used by people with ADHD?",
       "options": [
         "The Pomodoro Technique",
@@ -1621,6 +1674,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-4",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "What is \"Hyperfocus\" in the context of Attention Deficit Hyperactivity Disorder (ADHD)?",
       "options": [
         "A state of intense, deep absorption in a high-interest activity where external stimuli and the passage of time are completely tuned out",
@@ -1633,6 +1687,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-5",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "What is \"Time Blindness\", commonly experienced by individuals with ADHD?",
       "options": [
         "A persistent difficulty in gauging, tracking, and sensing the passage of time or estimating task durations",
@@ -1645,6 +1700,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-6",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "How do Visual Timers (such as the Time Timer) benefit neurodivergent individuals and people with ADHD?",
       "options": [
         "They represent remaining time as a diminishing colored disc, translating abstract numerical minutes into intuitive visual space",
@@ -1657,6 +1713,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-7",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "Which design pattern prevents cognitive fatigue and form abandonment for users with ADHD completing multi-step online forms?",
       "options": [
         "Segmenting forms into progressive step-by-step wizards with visible progress bars and auto-saving drafts",
@@ -1669,6 +1726,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-8",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "What is \"Body Doubling\" in ADHD support and productivity strategies?",
       "options": [
         "Working on tasks in the physical or virtual presence of another supportive individual to foster focus and gentle accountability",
@@ -1681,6 +1739,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-9",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "Why are auto-playing background animations, looping GIFs, and animated marquees especially disruptive to users with ADHD?",
       "options": [
         "They trigger involuntary reflexive attention capture in the brain, continuously derailing focus from primary reading material",
@@ -1693,6 +1752,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-a-10",
       "category_id": "cat-adhd",
+      "correct_index": 0,
       "question": "Under WCAG 2.2 Guideline 2.2.1 (Timing Adjustable), what accessibility accommodation must websites provide for time-limited activities?",
       "options": [
         "Advance warning before session expiry and a straightforward mechanism allowing the user to extend the time limit by at least 10 times",
@@ -1707,6 +1767,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-1",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "What does the concept of \"Neurodiversity\" emphasize regarding autistic individuals?",
       "options": [
         "That neurological differences are natural variations of the human genome, not diseases to be cured",
@@ -1719,6 +1780,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-2",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "Why are sudden strobe lights, loud unpredictable noises, and crowded digital banners challenging for many autistic individuals?",
       "options": [
         "Due to sensory processing differences where the nervous system experiences intense sensory overload",
@@ -1731,6 +1793,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-3",
       "category_id": "cat-autism",
+      "correct_index": 1,
       "question": "Which communication accommodation supports autistic students and employees in navigating daily transitions and tasks?",
       "options": [
         "Unannounced last-minute schedule overhauls",
@@ -1743,6 +1806,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-4",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "What is \"Stimming\" (self-stimulatory behavior) in autism?",
       "options": [
         "Repetitive physical movements or vocalizations (such as hand-flapping, rocking, or humming) used to self-regulate, calm emotions, or process sensory stimuli",
@@ -1755,6 +1819,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-5",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "What is the role of a \"Sensory Room\" or low-stimulation quiet space in inclusive schools and modern workplaces?",
       "options": [
         "A calm space equipped with dimmable lighting, noise dampening, and comfortable tactile seating for sensory decompression and recharge",
@@ -1767,6 +1832,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-6",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "What does the acronym PECS stand for in autism communication intervention?",
       "options": [
         "Picture Exchange Communication System",
@@ -1779,6 +1845,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-7",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "Why is avoiding idioms, sarcasm, and ambiguous metaphors recommended when writing instructional guides and software copy?",
       "options": [
         "Many neurodivergent and autistic users interpret phrasing literally, making idioms confusing or misleading",
@@ -1791,6 +1858,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-8",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "What is \"Autistic Burnout\"?",
       "options": [
         "A state of severe chronic physical and cognitive exhaustion resulting from the cumulative toll of navigating unaccommodated environments and masking autistic traits",
@@ -1803,6 +1871,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-9",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "How do Active Noise-Cancelling (ANC) headphones assist autistic individuals in transit stations, malls, or open-plan offices?",
       "options": [
         "They attenuate chaotic background frequencies, preventing sensory overload and nervous system hyperarousal",
@@ -1815,6 +1884,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-aut-10",
       "category_id": "cat-autism",
+      "correct_index": 0,
       "question": "In India, which statutory body under the Ministry of Social Justice and Empowerment provides guardianship and welfare schemes for Autism Spectrum Disorder?",
       "options": [
         "The National Trust (for Welfare of Persons with Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities)",
@@ -1829,6 +1899,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-1",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "What is the official toll-free national 24/7 mental health rehabilitation helpline in India launched by DEPwD, Government of India?",
       "options": [
         "KIRAN (1800-599-0019)",
@@ -1841,6 +1912,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-2",
       "category_id": "cat-mental-health",
+      "correct_index": 1,
       "question": "Under India's Rights of Persons with Disabilities (RPwD) Act 2016, how is Mental Illness recognized?",
       "options": [
         "It is not recognized legally",
@@ -1853,6 +1925,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-3",
       "category_id": "cat-mental-health",
+      "correct_index": 1,
       "question": "Which digital accessibility principle particularly benefits users experiencing high anxiety, panic, or cognitive fatigue?",
       "options": [
         "Strict countdown timers with immediate account logout",
@@ -1865,6 +1938,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-4",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "What is the Tele-MANAS initiative launched by the Ministry of Health and Family Welfare (MoHFW), Government of India?",
       "options": [
         "A 24x7 comprehensive nationwide tele-mental health service accessible via toll-free number 14416 across all Indian States and UTs in regional languages",
@@ -1877,6 +1951,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-5",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "Under India's Mental Healthcare Act 2017, which transformative human-rights provision was legally enacted?",
       "options": [
         "Decriminalization of suicide attempts and the legal right to create an Advance Directive detailing medical treatment choices",
@@ -1889,6 +1964,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-6",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "Why is offering dark and low-contrast color themes essential for users with acute anxiety, sensory sensitivity, or migraines?",
       "options": [
         "It suppresses high-luminance monitor glare and harsh contrast spikes, creating a calm, low-glare reading environment",
@@ -1901,6 +1977,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-7",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "How does cognitive grounding (such as the 5-4-3-2-1 technique) help an individual during a panic attack or acute anxiety flare-up?",
       "options": [
         "It engages all five physical senses to reorient attention to immediate physical reality, interrupting catastrophic panic loops",
@@ -1913,6 +1990,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-8",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "Under WCAG 2.2 Success Criterion 3.3.4 (Error Prevention), what safeguards are required for digital legal, financial, or user data operations?",
       "options": [
         "Providing clear confirmation checkpoints, summary review steps, and reversible \"Undo\" mechanisms before finalized submission",
@@ -1925,6 +2003,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-9",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "What is the function of an Emergency Crisis / Assistance Card carried by individuals with mental health or psychiatric conditions?",
       "options": [
         "To provide first responders and bystanders with instant, trusted emergency contacts, prescribed medications, and calm de-escalation guidelines",
@@ -1937,6 +2016,7 @@ export const staticCategoryQuizzes = {
     {
       "id": "qz-mh-10",
       "category_id": "cat-mental-health",
+      "correct_index": 0,
       "question": "What does \"Reasonable Accommodation\" encompass for employees with mental health conditions under the RPwD Act 2016?",
       "options": [
         "Tailored workplace modifications (such as flexible working hours, quiet workspaces, and break allowances) that enable equal participation without undue hardship",

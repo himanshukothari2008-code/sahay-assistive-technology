@@ -126,6 +126,39 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
       return;
     }
 
+    const isStaticQuiz = activeQuestions.every((question) => Number.isInteger(question.correct_index));
+    if (isStaticQuiz) {
+      const results = activeQuestions.map((question) => {
+        const selectedIndex = selectedAnswers[question.id];
+        const isCorrect = selectedIndex === question.correct_index;
+        return {
+          question_id: question.id,
+          selected_index: selectedIndex,
+          correct_index: question.correct_index,
+          is_correct: isCorrect,
+          explanation: question.explanation
+        };
+      });
+      const score = results.filter((result) => result.is_correct).length;
+      const percentage = Math.round((score / activeQuestions.length) * 100);
+      setQuizResult({
+        score,
+        total: activeQuestions.length,
+        percentage,
+        passed: percentage >= 60,
+        results
+      });
+
+      if (percentage >= 60) {
+        confetti({
+          particleCount: 85,
+          spread: 75,
+          origin: { y: 0.6 }
+        });
+      }
+      return;
+    }
+
     try {
       setIsSubmitting(true);
       setError(null);

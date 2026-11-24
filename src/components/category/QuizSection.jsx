@@ -10,20 +10,21 @@ import {
   ArrowRight,
   Shuffle,
   Sparkles,
-  Layers
+  Layers,
+  CheckSquare
 } from 'lucide-react';
 import Button from '../common/Button';
+import { staticCategoryQuizzes } from '../../data/staticCategoriesData';
 
 const QUESTIONS_PER_SET = 5;
 
 /**
- * Pick a random subset of 5 questions, prioritizing questions not in excludeIds
+ * Pick 5 random questions from a pool
  */
 function pickRandomSubset(pool, excludeIds = []) {
   if (!pool || pool.length === 0) return [];
   if (pool.length <= QUESTIONS_PER_SET) return pool;
 
-  // Prioritize questions not in the current active set
   const remaining = pool.filter((q) => !excludeIds.includes(q.id));
   const shuffledRemaining = [...remaining].sort(() => 0.5 - Math.random());
 
@@ -31,7 +32,6 @@ function pickRandomSubset(pool, excludeIds = []) {
     return shuffledRemaining.slice(0, QUESTIONS_PER_SET);
   }
 
-  // If remaining is less than 5, take all remaining and backfill with questions from previous set
   const needed = QUESTIONS_PER_SET - shuffledRemaining.length;
   const previousPool = pool.filter((q) => excludeIds.includes(q.id));
   const shuffledPrevious = [...previousPool].sort(() => 0.5 - Math.random());
@@ -41,13 +41,30 @@ function pickRandomSubset(pool, excludeIds = []) {
 
 export function QuizSection({ questions = [], categoryId, categoryTitle }) {
   const { t } = useTranslation();
+  const [selectedQuizTab, setSelectedQuizTab] = useState('quiz-1'); // 'quiz-1' | 'quiz-2' | 'quiz-3' | 'random'
   const [activeQuestions, setActiveQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [quizResult, setQuizResult] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
-  // Initialize or update active question set
+  // Helper to extract questions for a selected tab
+  const getQuestionsForTab = (tab, pool) => {
+    if (!pool || pool.length === 0) return [];
+    if (tab === 'quiz-1') {
+      return pool.slice(0, 5);
+    }
+    if (tab === 'quiz-2') {
+      return pool.slice(5, 10).length >= 5 ? pool.slice(5, 10) : pool.slice(0, 5);
+    }
+    if (tab === 'quiz-3') {
+      return pool.slice(10, 15).length >= 5 ? pool.slice(10, 15) : pool.slice(5, 10);
+    }
+    // Random mode
+    return pickRandomSubset(pool, []);
+  };
+
+  // Sync active questions when pool or category changes
   useEffect(() => {
     if (!questions || questions.length === 0) {
       setActiveQuestions([]);
@@ -56,29 +73,47 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
       return;
     }
 
-    setActiveQuestions((prev) => {
-      // If we already have questions for this category, check if language changed
-      const prevIds = prev.map((q) => q.id);
-      const isSamePool =
-        prevIds.length > 0 && prevIds.every((id) => questions.some((q) => q.id === id));
+    const setQs = getQuestionsForTab(selectedQuizTab, questions);
+    setActiveQuestions(setQs);
+    setSelectedAnswers({});
+    setQuizResult(null);
+    setError(null);
+  }, [questions, categoryId]);
 
-      if (isSamePool) {
-        // Language or question update: preserve current set of IDs with new localized text
-        const updated = prevIds
-          .map((id) => questions.find((q) => q.id === id))
-          .filter(Boolean);
-        if (updated.length === Math.min(QUESTIONS_PER_SET, questions.length)) {
-          return updated;
-        }
-      }
+  // Tab change handler
+  const handleSelectTab = (tab) => {
+    if (tab === selectedQuizTab && tab !== 'random') return;
+    setSelectedQuizTab(tab);
+    const setQs = getQuestionsForTab(tab, questions);
+    setActiveQuestions(setQs);
+    setSelectedAnswers({});
+    setQuizResult(null);
+    setError(null);
+  };
 
-      // Initial load or new category: pick fresh 5 questions
+  // Refresher button handler (loads a fresh random set or next set)
+  const handleRefreshNewSet = () => {
+    if (selectedQuizTab === 'quiz-1') {
+      handleSelectTab('quiz-2');
+    } else if (selectedQuizTab === 'quiz-2') {
+      handleSelectTab('quiz-3');
+    } else if (selectedQuizTab === 'quiz-3') {
+      handleSelectTab('random');
+    } else {
+      // Re-shuffle random set
+      const currentIds = activeQuestions.map((q) => q.id);
+      const freshSet = pickRandomSubset(questions, currentIds);
+      setActiveQuestions(freshSet);
       setSelectedAnswers({});
       setQuizResult(null);
       setError(null);
-      return pickRandomSubset(questions, []);
-    });
-  }, [questions, categoryId]);
+    }
+
+    const quizElem = document.getElementById('sec-quiz');
+    if (quizElem) {
+      quizElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   if (!questions || questions.length === 0) {
     return (
@@ -99,22 +134,7 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
     }));
   };
 
-  const handleRefreshNewSet = () => {
-    const currentIds = activeQuestions.map((q) => q.id);
-    const freshSet = pickRandomSubset(questions, currentIds);
-    setActiveQuestions(freshSet);
-    setSelectedAnswers({});
-    setQuizResult(null);
-    setError(null);
-
-    // Smooth scroll to top of quiz section
-    const quizElem = document.getElementById('sec-quiz');
-    if (quizElem) {
-      quizElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const answeredCount = Object.keys(selectedAnswers).length;
     if (answeredCount < activeQuestions.length) {
@@ -126,73 +146,76 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
       return;
     }
 
-    const isStaticQuiz = activeQuestions.every((question) => Number.isInteger(question.correct_index));
-    if (isStaticQuiz) {
-      const results = activeQuestions.map((question) => {
-        const selectedIndex = selectedAnswers[question.id];
-        const isCorrect = selectedIndex === question.correct_index;
-        return {
-          question_id: question.id,
-          selected_index: selectedIndex,
-          correct_index: question.correct_index,
-          is_correct: isCorrect,
-          explanation: question.explanation
-        };
-      });
-      const score = results.filter((result) => result.is_correct).length;
-      const percentage = Math.round((score / activeQuestions.length) * 100);
-      setQuizResult({
-        score,
-        total: activeQuestions.length,
-        percentage,
-        passed: percentage >= 60,
-        results
-      });
+    setIsSubmitting(true);
+    setError(null);
 
-      if (percentage >= 60) {
-        confetti({
-          particleCount: 85,
-          spread: 75,
-          origin: { y: 0.6 }
-        });
+    // Reliable client-side evaluation with static quiz fallback for correct_index
+    const results = activeQuestions.map((q) => {
+      let correctIdx = q.correct_index;
+
+      // If correct_index is undefined, look up in staticCategoryQuizzes
+      if (!Number.isInteger(correctIdx)) {
+        for (const catKey of Object.keys(staticCategoryQuizzes)) {
+          const match = staticCategoryQuizzes[catKey].find((item) => item.id === q.id);
+          if (match && Number.isInteger(match.correct_index)) {
+            correctIdx = match.correct_index;
+            break;
+          }
+        }
       }
-      return;
+
+      if (!Number.isInteger(correctIdx)) {
+        correctIdx = 0; // ultimate fallback
+      }
+
+      const selectedIndex = selectedAnswers[q.id];
+      const isCorrect = selectedIndex === correctIdx;
+
+      return {
+        question_id: q.id,
+        selected_index: selectedIndex,
+        correct_index: correctIdx,
+        is_correct: isCorrect,
+        explanation: q.explanation
+      };
+    });
+
+    const score = results.filter((r) => r.is_correct).length;
+    const percentage = Math.round((score / activeQuestions.length) * 100);
+    const passed = percentage >= 60;
+
+    setQuizResult({
+      score,
+      total: activeQuestions.length,
+      percentage,
+      passed,
+      results
+    });
+
+    if (passed) {
+      confetti({
+        particleCount: 85,
+        spread: 75,
+        origin: { y: 0.6 }
+      });
     }
 
+    setIsSubmitting(false);
+
+    // Attempt background save to backend if server is accessible
     try {
-      setIsSubmitting(true);
-      setError(null);
-
-      const payload = {
-        answers: Object.entries(selectedAnswers).map(([qId, sIdx]) => ({
-          question_id: qId,
-          selected_index: sIdx
-        }))
-      };
-
-      const res = await fetch(`/api/v1/quiz/${categoryId}/submit`, {
+      fetch(`/api/v1/quiz/${categoryId}/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Evaluation failed');
-
-      setQuizResult(data.data);
-
-      if (data.data.percentage >= 60) {
-        confetti({
-          particleCount: 85,
-          spread: 75,
-          origin: { y: 0.6 }
-        });
-      }
+        body: JSON.stringify({
+          answers: Object.entries(selectedAnswers).map(([qId, sIdx]) => ({
+            question_id: qId,
+            selected_index: sIdx
+          }))
+        })
+      }).catch(() => {});
     } catch (err) {
-      console.error('Quiz submit error:', err);
-      setError(err.message);
-    } finally {
-      setIsSubmitting(false);
+      // Ignored non-blocking persistence
     }
   };
 
@@ -207,7 +230,7 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
   const totalInBank = questions.length;
 
   return (
-    <div className="p-6 sm:p-8 rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-[var(--bg-surface)]">
+    <div className="p-6 sm:p-8 rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-[var(--bg-surface)] shadow-sm">
       {/* Quiz Header */}
       <div className="flex flex-wrap items-start justify-between gap-4 pb-6 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-2xl">
@@ -222,7 +245,7 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
             </span>
             {totalInBank > 5 && (
               <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
-                ({t('quiz.bank_size', { total: totalInBank, defaultValue: `Pool of ${totalInBank} questions` })})
+                ({t('quiz.bank_size', { total: totalInBank, defaultValue: `Total Bank: ${totalInBank} Questions (3 Sets)` })})
               </span>
             )}
           </div>
@@ -233,23 +256,22 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
             {t(
               'quiz.instruction',
-              'Test your understanding with 5 curated questions based on real-world assistive guidelines and the RPwD Act 2016. Use the refresher button anytime to generate new questions.'
+              'Choose between Quiz 1st, Quiz 2nd, and Quiz 3rd below. Each set features 5 distinct questions covering definitions, assistive technologies, and the RPwD Act 2016.'
             )}
           </p>
         </div>
 
         {/* Top Actions & Score / Progress Badge */}
         <div className="flex flex-wrap items-center gap-3">
-          {/* Refresh / New Set Button in Header */}
           <button
             type="button"
             onClick={handleRefreshNewSet}
             disabled={isSubmitting}
-            title={t('quiz.refresh_desc', 'Load a fresh random set of 5 questions')}
+            title={t('quiz.refresh_desc', 'Refresh or switch to another question set')}
             className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-semibold border-2 border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-400 dark:hover:bg-blue-950/40 dark:hover:text-blue-300 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
           >
             <Shuffle className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-            <span>{t('quiz.refresh_set', '🔄 New Question Set (5 Questions)')}</span>
+            <span>{t('quiz.refresh_set', '🔄 Refresh Question Set')}</span>
           </button>
 
           {!quizResult ? (
@@ -281,6 +303,65 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
         </div>
       </div>
 
+      {/* Quiz Set Selection Tabs: Quiz 1st, Quiz 2nd, Quiz 3rd, Random */}
+      <div className="mt-6 flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700">
+        <button
+          type="button"
+          onClick={() => handleSelectTab('quiz-1')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all touch-target cursor-pointer ${
+            selectedQuizTab === 'quiz-1'
+              ? 'bg-blue-600 text-white shadow-sm'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+          }`}
+          aria-pressed={selectedQuizTab === 'quiz-1'}
+        >
+          <CheckSquare className="w-4 h-4" />
+          <span>1. Quiz 1st (Q1–Q5)</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => handleSelectTab('quiz-2')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all touch-target cursor-pointer ${
+            selectedQuizTab === 'quiz-2'
+              ? 'bg-blue-600 text-white shadow-sm'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+          }`}
+          aria-pressed={selectedQuizTab === 'quiz-2'}
+        >
+          <CheckSquare className="w-4 h-4" />
+          <span>2. Quiz 2nd (Q6–Q10)</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => handleSelectTab('quiz-3')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all touch-target cursor-pointer ${
+            selectedQuizTab === 'quiz-3'
+              ? 'bg-blue-600 text-white shadow-sm'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+          }`}
+          aria-pressed={selectedQuizTab === 'quiz-3'}
+        >
+          <CheckSquare className="w-4 h-4" />
+          <span>3. Quiz 3rd (Q11–Q15)</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => handleSelectTab('random')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all touch-target cursor-pointer sm:ml-auto ${
+            selectedQuizTab === 'random'
+              ? 'bg-indigo-600 text-white shadow-sm'
+              : 'text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+          }`}
+          aria-pressed={selectedQuizTab === 'random'}
+        >
+          <Shuffle className="w-4 h-4" />
+          <span>🔀 Random Set</span>
+        </button>
+      </div>
+
       {/* Error Alert */}
       {error && (
         <div className="my-4 p-4 rounded-xl bg-red-100 text-red-900 dark:bg-red-950 dark:text-red-200 border border-red-300 dark:border-red-800 text-sm">
@@ -309,14 +390,16 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
                 )}
           </span>
 
-          <button
-            type="button"
-            onClick={handleRefreshNewSet}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 font-bold text-xs text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700 cursor-pointer transition-colors shadow-xs"
-          >
-            <Shuffle className="w-3.5 h-3.5" />
-            {t('quiz.refresh_set', '🔄 New Question Set (5 Questions)')}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={handleRefreshNewSet}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 font-bold text-xs text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-slate-700 cursor-pointer transition-colors shadow-xs"
+            >
+              <Shuffle className="w-3.5 h-3.5" />
+              <span>Next Quiz Set</span>
+            </button>
+          </div>
         </div>
       )}
 
@@ -440,7 +523,7 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
                   onClick={handleRefreshNewSet}
                   icon={Shuffle}
                 >
-                  {t('quiz.refresh_set', '🔄 New Question Set (5 Questions)')}
+                  {t('quiz.refresh_set', '🔄 Refresh Question Set')}
                 </Button>
               </>
             ) : (
@@ -452,7 +535,7 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
                   onClick={handleRetakeSame}
                   icon={RotateCcw}
                 >
-                  {t('quiz.retake', 'Retry Current Set')}
+                  {t('quiz.retake', 'Retry Current Quiz')}
                 </Button>
 
                 <Button
@@ -462,7 +545,7 @@ export function QuizSection({ questions = [], categoryId, categoryTitle }) {
                   onClick={handleRefreshNewSet}
                   icon={Shuffle}
                 >
-                  {t('quiz.refresh_set', '🔄 New Question Set (5 Questions)')}
+                  {t('quiz.refresh_set', '🔄 Next / Refresh Set')}
                 </Button>
               </>
             )}

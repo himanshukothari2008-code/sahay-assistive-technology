@@ -51,7 +51,7 @@ router.get('/:slug', (req, res) => {
     );
 
     const quizRaw = query.all(
-      'SELECT id, category_id, question, options_json, explanation FROM quiz_questions WHERE category_id = ?',
+      'SELECT id, category_id, question, options_json, correct_index, explanation FROM quiz_questions WHERE category_id = ?',
       [category.id]
     );
 
@@ -60,6 +60,7 @@ router.get('/:slug', (req, res) => {
       category_id: q.category_id,
       question: q.question,
       options: JSON.parse(q.options_json),
+      correct_index: q.correct_index,
       explanation: q.explanation
     }));
 
